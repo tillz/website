@@ -1,0 +1,31 @@
+{% extends "layout.twig" %}
+
+{% block title %}{{ plugin.title }}{% endblock %}
+{% block description %}Kanboard Plugin: {{ plugin.title }}{% endblock %}
+
+{% block content %}
+    <section id="plugins">
+        <article class="plugin-summary">
+            <h1>Plugin {{ plugin.title }}</h1>
+            <p class="plugin-info"><strong>Author:</strong> {{ plugin.author }} | <strong>License:</strong> {{ plugin.license }} | <strong>Version:</strong> {{ plugin.version }}</p>
+
+            <div class="plugin-description">
+                {{ plugin.description_markdown|raw }}
+            </div>
+
+            <div class="plugin-links">
+                {% if plugin.download %}
+                    <a href="{{ plugin.download }}" class="btn btn-blue">Download</a>
+                {% endif %}
+                {% if plugin.homepage %}
+                    <a href="{{ plugin.homepage }}"{% if plugin.download is empty %} class="btn btn-blue"{% endif %}>Homepage</a>
+                {% endif %}
+            </div>
+        </article>
+
+        <article id="readme">
+            <h1>Project Readme</h1>
+            <div class="content">{{ plugin.readme_markdown|raw }}</div>
+        </article>
+    </section>
+{% endblock %}

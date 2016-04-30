@@ -1,0 +1,26 @@
+{% extends "layout.twig" %}
+
+{% block title %}Unified Dashboard{% endblock %}
+{% block description %}Use the central dashboard to get a clear overview of your work load{% endblock %}
+
+{% block content %}
+    <article id="feature">
+        <h1>Dashboard for all projects</h1>
+
+        <p>Get all important information in one place.</p>
+
+        <figure>
+            <img src="/screenshots/tour/dashboard.png" alt="Dashboard" title="Dashboard"/>
+        </figure>
+        <p>Use the central dashboard to get a clear overview of your work load.</p>
+
+        <h2>Discover other features</h2>
+        <ul>
+            <li><a href="/features/kanban">Manage your Kanban board efficiently</a></li>
+            <li><a href="/features/search-and-filters">Use filters to find your tasks</a></li>
+            <li><a href="/features/analytics-and-reports">Visualize and analyze your workload with reports</a></li>
+            <li><a href="/features/integrations">Powerful integrations with third-party services</a></li>
+            <li><a href="/features/gantt-chart">Visualize the timeline of your project with Gantt charts</a></li>
+        </ul>
+    </article>
+{% endblock %}

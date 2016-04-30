@@ -1,0 +1,38 @@
+{% extends "layout.twig" %}
+
+{% block title %}Simple Kanban Board{% endblock %}
+{% block description %}Drag and drop your tasks easily, change the board according to your needs{% endblock %}
+
+{% block content %}
+    <article id="feature">
+        <h1>Kanban Board</h1>
+
+        <p>The user interface of Kanboard is simple and straightforward, there is nothing fancy.</p>
+
+        <h2>Drag and drop tasks between columns easily</h2>
+        <figure>
+            <img src="/screenshots/tour/drag-and-drop-tasks.png" alt="Drag and drop tasks" title="Drag and drop tasks"/>
+        </figure>
+        <p>Kanboard adapts to your project and your workflow, you can add, rename and remove columns at any time.</p>
+
+        <h2>Switch between your boards in one click or use the keyboard shortcuts</h2>
+        <figure>
+            <img src="/screenshots/tour/board-selector.png" alt="Board selector" title="Board selector"/>
+        </figure>
+
+        <h2>Limit your work in progress to be more efficient</h2>
+        <figure>
+            <img src="/screenshots/tour/task-limit.png" alt="Limit work in progress" title="Limit work in progress"/>
+        </figure>
+        <p>Avoid multitasking to stay focus on your work. When you are over the limit, the column is highlighted.</p>
+
+        <h2>Discover other features</h2>
+        <ul>
+            <li><a href="/features/search-and-filters">Use filters to find your tasks</a></li>
+            <li><a href="/features/dashboard">Dashboard for all your projects</a></li>
+            <li><a href="/features/analytics-and-reports">Visualize and analyze your workload with reports</a></li>
+            <li><a href="/features/integrations">Powerful integrations with third-party services</a></li>
+            <li><a href="/features/gantt-chart">Visualize the timeline of your project with Gantt charts</a></li>
+        </ul>
+    </article>
+{% endblock %}

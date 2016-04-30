@@ -1,0 +1,18 @@
+{% extends "layout.twig" %}
+
+{% block title %}{{ post.title }}{% endblock %}
+{% block description %}{{ post.title }}{% endblock %}
+
+{% block content %}
+    <section id="news">
+        <article>
+            <h1><a href="/news/{{ post.url }}">{{ post.title }}</a></h1>
+            <div class="news-content">
+                <time datetime="{{ post.date|date('Y-m-d') }}">{{ post.date|date('F jS, Y') }}</time>
+                {{ post.content|raw }}
+            </div>
+        </article>
+
+        {% include 'newsletter.twig' %}
+    </section>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "layout.twig" %}
+
+{% block title %}Download stable version{% endblock %}
+{% block description %}Download Kanboard stable version (free and open source){% endblock %}
+
+{% block content %}
+    <article id="download">
+        <h1>Download</h1>
+        <dl>
+            <dt>Stable version (v{{ app.version }})</dt>
+            <dd><a href="/kanboard-latest.zip">kanboard-latest.zip</a> {{ app.release_date }}</dd>
+            <dt>Development version (Git Repository)</dt>
+            <dd><a href="https://github.com/fguillot/kanboard">https://github.com/fguillot/kanboard</a></dd>
+        </dl>
+        <p class="alert">
+            Do not forget to read the <a href="/documentation/installation">installation instructions</a> and check the <a href="/documentation/requirements">requirements</a>.
+        </p>
+    </article>
+
+    {% include 'donation.twig' %}
+{% endblock %}

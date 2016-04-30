@@ -1,0 +1,10 @@
+{% extends "layout.twig" %}
+
+{% block title %}{{ title }}{% endblock %}
+{% block description %}{{ title }}{% endblock %}
+
+{% block content %}
+    <section id="content">
+        {{ content|raw }}
+    </section>
+{% endblock %}

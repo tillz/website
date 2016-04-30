@@ -1,0 +1,32 @@
+{% extends "layout.twig" %}
+
+{% block title %}Plugins for Kanboard{% endblock %}
+{% block description %}Available plugins for Kanboard{% endblock %}
+
+{% block content %}
+    <section id="plugins">
+        <h1>Kanboard Plugins</h1>
+
+        {% for url, plugin in plugins %}
+        <article class="plugin">
+            <h2><a href="/plugin/{{ url }}">{{ plugin.title }}</a></h2>
+            <p class="plugin-info"><strong>Author:</strong> {{ plugin.author }} | <strong>License:</strong> {{ plugin.license }} | <strong>Version:</strong> {{ plugin.version }}</p>
+
+            <div class="plugin-description">
+                {{ plugin.description_markdown|raw }}
+            </div>
+
+            <div class="plugin-links">
+                {% if plugin.download %}
+                    <a href="{{ plugin.download }}" class="btn btn-blue">Download</a>
+                {% endif %}
+                {% if plugin.homepage %}
+                    <a href="{{ plugin.homepage }}"{% if plugin.download is empty %} class="btn btn-blue"{% endif %}>Homepage</a>
+                {% endif %}
+            </div>
+        </article>
+        {%  endfor %}
+
+        <p>To publish your own plugin on this page, <a href="https://github.com/kanboard/website">send a pull-request to this repository</a>.</p>
+    </section>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "layout.twig" %}
+
+{% block title %}Analytics, Charts and Reports{% endblock %}
+{% block description %}Analyze your projects with reports{% endblock %}
+
+{% block content %}
+    <article id="feature">
+        <h1>Visualize and analyze your workload with reports</h1>
+
+        <p>Several <a href="/documentation/analytics">charts are available</a> to get a quick overview of your projects.</p>
+
+        <h2>Cumulative Flow Diagram</h2>
+        <figure>
+            <img src="/screenshots/documentation/cfd.png" alt="Cumulative Flow Diagram" title="Cumulative Flow Diagram"/>
+        </figure>
+        <p>Detect bottlenecks in your workflow, change the work in progress limits and evaluate the impact.</p>
+
+        <h2>Lead and cycle time</h2>
+        <figure>
+            <img src="/screenshots/documentation/average-lead-cycle-time.png" alt="Lead and Cycle time" title="Lead and Cycle time"/>
+        </figure>
+        <p>With this chart, you can by example improve the response time of your customer requests. Lower is the lead time better is it.</p>
+
+        <h2>Discover other features</h2>
+        <ul>
+            <li><a href="/features/kanban">Manage your Kanban board efficiently</a></li>
+            <li><a href="/features/search-and-filters">Use filters to find your tasks</a></li>
+            <li><a href="/features/dashboard">Dashboard for all your projects</a></li>
+            <li><a href="/features/integrations">Powerful integrations with third-party services</a></li>
+            <li><a href="/features/gantt-chart">Visualize the timeline of your project with Gantt charts</a></li>
+        </ul>
+    </article>
+{% endblock %}

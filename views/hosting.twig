@@ -1,0 +1,50 @@
+{% extends "layout.twig" %}
+
+{% block title %}Kanboard Hosting{% endblock %}
+{% block description %}Kanboard as a service{% endblock %}
+
+{% block content %}
+    <article id="managed-hosting">
+        <h1>Kanboard Managed Hosting</h1>
+
+        <p class="alert">Kanboard managed hosting is not ready yet, subscribe to be notified.</p>
+
+        <form id="newsletter" method="post" action="/subscribe/hosting">
+            <h3>Are you interested by a hosted version of Kanboard?</h3>
+            <input type="email" name="email" required placeholder="Enter your email address">
+            <input type="submit" value="Yes, keep me in touch" class="btn btn-blue">
+            <p>We will never spam and your privacy is guaranteed.</p>
+        </form>
+    </article>
+
+    <article id="hosting-providers">
+        <h2>Web-hosting for Kanboard</h2>
+
+        <dl>
+            <dt><a href="https://framaboard.org/">Framaboard</a></dt>
+            <dd>
+                Framasoft is a non-profit French organization that promotes free and open source software.
+                <a href="https://framaboard.org/">Framaboard</a> is a free Kanboard hosting.
+            </dd>
+            <dt><a href="https://cloudron.io/">Cloudron</a></dt>
+            <dd>
+                <a href="https://cloudron.io/">Cloudron</a> is a private smartserver on which you can install web apps like Kanboard.
+                You can install Kanboard into a custom domain and each installation is backed up and kept up-to-date with Kanboard releases automatically.
+                <br><br>
+                <a href="https://cloudron.io/button.html?app=net.kanboard.cloudronapp"><img src="https://cloudron.io/img/button.svg" alt="Install"></a>
+            </dd>
+            <dt><a href="https://www.scaleway.com/imagehub/kanboard/">Scaleway</a></dt>
+            <dd>
+                <a href="https://www.scaleway.com/">Scaleway</a> is a unique IaaS platform, offering on demand dedicated SSD cloud servers.
+                You can <a href="https://www.scaleway.com/imagehub/kanboard/">install Kanboard with only one click</a> on a baremetal server in less than 44 seconds.
+            </dd>
+            <dt><a href="https://elements.heroku.com/buttons/fguillot/kanboard">Heroku</a></dt>
+            <dd>
+                <a href="https://heroku.com/">Heroku</a> is a cloud application platform.
+                You can <a href="https://elements.heroku.com/buttons/fguillot/kanboard">deploy Kanboard in one click</a> on Heroku.
+                <br><br>
+                <a href="https://heroku.com/deploy?template=https://github.com/fguillot/kanboard"><img src="https://www.herokucdn.com/deploy/button.png"></a>
+            </dd>
+        </dl>
+    </article>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "layout.twig" %}
+
+{% block title %}Integration with third-party services{% endblock %}
+{% block description %}Connect Kanboard to multiple services{% endblock %}
+
+{% block content %}
+    <article id="feature">
+        <h1>Powerful integrations with third-party services</h1>
+
+        <p>Connect Kanboard with external services that you already use.</p>
+
+        <h2>Create tasks directly by email</h2>
+        <figure>
+            <img src="/screenshots/tour/incoming-emails.png" alt="Incoming email" title="Incoming Email"/>
+        </figure>
+        <p>Choose between several SMTP providers to receive emails directly in Kanboard.</p>
+
+        <h2>Synchronize issues and receive commits from code hosting platform</h2>
+        <figure>
+            <img src="/screenshots/tour/github.png" alt="Github Synchronization" title="Github Synchronization"/>
+        </figure>
+        <p>Close tasks, add comments, assign categories automatically and more by using webhooks for Github, Gitlab and Bitbucket.</p>
+
+        <h2>Receive notifications on chat services</h2>
+        <figure>
+            <img src="/screenshots/documentation/hipchat-notification.png" alt="Hipchat Notification" title="Hipchat Notification"/>
+        </figure>
+        <p>Watch project notifications directly in Hipchat, Slack, Mattermost and Jabber.</p>
+
+        <h2>Subscribe to the calendar and RSS feeds</h2>
+        <figure>
+            <img src="/screenshots/tour/ical.png" alt="iCalendar feed" title="iCalendar feed"/>
+        </figure>
+        <p>Import in Microsoft Outlook or Apple Calendar your tasks with a due date.</p>
+
+        <h2>Develop your own integration with the API and webhooks</h2>
+        <figure>
+            <img src="/screenshots/tour/api-dev.png" alt="Python Client" title="Python Client"/>
+        </figure>
+        <p>Plug your internal tools to Kanboard by making your own scripts.</p>
+
+        <h2>Discover other features</h2>
+        <ul>
+            <li><a href="/features/kanban">Manage your Kanban board efficiently</a></li>
+            <li><a href="/features/search-and-filters">Use filters to find your tasks</a></li>
+            <li><a href="/features/dashboard">Dashboard for all your projects</a></li>
+            <li><a href="/features/analytics-and-reports">Visualize and analyze your workload with reports</a></li>
+            <li><a href="/features/gantt-chart">Visualize the timeline of your project with Gantt charts</a></li>
+        </ul>
+    </article>
+{% endblock %}

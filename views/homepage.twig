@@ -1,0 +1,37 @@
+{% extends "layout.twig" %}
+
+{% block title %}Kanban Project Management Software{% endblock %}
+{% block description %}Kanboard, the powerful Kanban application. Version {{ app.version }} released on {{ app.release_date }}{% endblock %}
+
+{% block content %}
+    <article id="overview">
+        <h1>Kanboard is a project management software that uses the Kanban methodology</h1>
+        <p class="promo">Version {{ app.version }} released ({{ app.release_date }})</p>
+
+        <figure>
+            <img src="/screenshots/tour/board.png" alt="Kanban Board" title="Kanban Board"/>
+        </figure>
+
+        <h2 class="baseline">Kanboard is not for everybody, it's made for people who want to manage their projects efficiently and simply.</h2>
+
+        <ul>
+            <li><a href="/documentation/what-is-kanban">Kanban methodology</a></li>
+            <li>Visualize your work</li>
+            <li>Limit your work in progress to be <strong>more efficient</strong></li>
+            <li>Customize your boards according to your <a href="/documentation/usage-examples">business activities</a></li>
+            <li>Multiple boards with the ability to drag and drop tasks</li>
+            <li>Reports and analytics</li>
+            <li>Fast and simple to use</li>
+            <li>Access from anywhere with a modern browser</li>
+            <li><strong>Free, open source and self-hosted</strong></li>
+            <li>Super simple installation</li>
+        </ul>
+
+        <div class="big-button">
+            <a href="/features">See all features</a>
+        </div>
+    </article>
+
+    {% include 'donation.twig' %}
+
+{% endblock %}

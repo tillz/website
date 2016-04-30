@@ -1,0 +1,32 @@
+{% extends "layout.twig" %}
+
+{% block title %}Kanboard News{% endblock %}
+{% block description %}Last release announcements{% endblock %}
+
+{% block content %}
+    <section id="news">
+        <article id="last-news">
+            <h1><a href="/news/{{ posts[0].url }}">{{ posts[0].title }}</a></h1>
+            <div class="news-content">
+                <time datetime="{{ posts[0].date|date('Y-m-d') }}">{{ posts[0].date|date('F jS, Y') }}</time>
+                {{ posts[0].content|raw }}
+            </div>
+        </article>
+
+        {% include 'newsletter.twig' %}
+
+        <article id="older-news">
+            <h2>Older news</h2>
+            <dl>
+                {% for post in posts|slice(1) %}
+                    <dt>
+                        <time datetime="{{ post.date|date('Y-m-d') }}">{{ post.date|date('F jS, Y') }}</time>
+                    </dt>
+                    <dd>
+                        <a href="/news/{{ post.url }}">{{ post.title }}</a>
+                    </dd>
+                {% endfor %}
+            </dl>
+        </article>
+    </section>
+{% endblock %}
