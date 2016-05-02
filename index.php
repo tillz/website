@@ -404,7 +404,7 @@ $app->get('/version', function () use ($app) {
 $app->get('/feed', function () use ($app) {
     return cache($app, function () use ($app) {
         $feedBuilder = AtomFeedBuilder::create()
-            ->withTitle('Miniflux')
+            ->withTitle('Kanboard News')
             ->withAuthor('Frédéric Guillot', '', 'https://github.com/fguillot')
             ->withFeedUrl('https://kanboard.net/feed')
             ->withSiteUrl('https://kanboard.net/')
