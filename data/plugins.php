@@ -159,13 +159,13 @@ Budget planning based on sub-task time tracking:
     ],
     'registration' => [
         'title' => 'Self-Registration',
-        'version' => '1.0.0',
+        'version' => '1.0.1',
         'author' => 'Frédéric Guillot',
         'license' => 'MIT',
         'description' => 'Self-registration plugin to allow people to sign up on Kanboard.',
         'homepage' => 'https://github.com/kanboard/plugin-registration',
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-registration/master/README.md',
-        'download' => 'https://github.com/kanboard/plugin-registration/releases/download/v1.0.0/Registration-1.0.0.zip',
+        'download' => 'https://github.com/kanboard/plugin-registration/releases/download/v1.0.1/Registration-1.0.1.zip',
     ],
     'reverse-proxy-ldap' => [
         'title' => 'Reverse-Proxy Authentication with LDAP user provider',
