@@ -10,33 +10,33 @@ Project budget
 The budget section is available for each project.
 The data used for the calculation come from the subtask time tracking, the user timetable and the user hourly rate.
 
-![Budget Graph](http://kanboard.net/screenshots/documentation/budget-graph.png)
+![Budget Graph](https://kanboard.net/screenshots/documentation/budget-graph.png)
 
 When you start a new project you can define a budget line.
 Then Kanboard will calculate the cost for you based on the user timesheet.
 
-[Read the documentation about project budgets](http://kanboard.net/documentation/budget)
+[Read the documentation about project budgets](https://kanboard.net/documentation/budget)
 
 User hourly rate
 ----------------
 
 Each user can have a different hourly rate, this feature is used for the budget calculation.
 
-![Hourly Rate](http://kanboard.net/screenshots/documentation/hourly-rate.png)
+![Hourly Rate](https://kanboard.net/screenshots/documentation/hourly-rate.png)
 
-[Read the documentation about that](http://kanboard.net/documentation/hourly-rate)
+[Read the documentation about that](https://kanboard.net/documentation/hourly-rate)
 
 User timetable
 --------------
 
 For each person, you can define a regular timetable for the week but also schedule time-off and overtime.
 
-![Timetable](http://kanboard.net/screenshots/documentation/timetable.png)
+![Timetable](https://kanboard.net/screenshots/documentation/timetable.png)
 
 This data is also used in the calendar if you have enabled the subtask time tracking.
 The time spent takes into account the worked hours.
 
-[Read the documentation about timetables](http://kanboard.net/documentation/timetable)
+[Read the documentation about timetables](https://kanboard.net/documentation/timetable)
 
 Task transitions
 ----------------
@@ -44,27 +44,27 @@ Task transitions
 Each time you move a task to another column, Kanboard records this action in a seperate table now.
 So you have a better understanding of the history of the task.
 
-![Transitions](http://kanboard.net/screenshots/documentation/transitions.png)
+![Transitions](https://kanboard.net/screenshots/documentation/transitions.png)
 
-[Read the documentation about transitions](http://kanboard.net/documentation/transitions)
+[Read the documentation about transitions](https://kanboard.net/documentation/transitions)
 
 Slack integration
 -----------------
 
 If you use Slack you can receive Kanboard notifications on your team channel:
 
-![Slack notification](http://kanboard.net/screenshots/documentation/slack-notification.png)
+![Slack notification](https://kanboard.net/screenshots/documentation/slack-notification.png)
 
-[Read the documentation about Slack](http://kanboard.net/documentation/slack)
+[Read the documentation about Slack](https://kanboard.net/documentation/slack)
 
 Hipchat integration
 -------------------
 
 Same thing for Hipchat:
 
-![Hipchat notification](http://kanboard.net/screenshots/documentation/hipchat-notification.png)
+![Hipchat notification](https://kanboard.net/screenshots/documentation/hipchat-notification.png)
 
-[Read the documentation about Hipchat](http://kanboard.net/documentation/hipchat)
+[Read the documentation about Hipchat](https://kanboard.net/documentation/hipchat)
 
 Two factor authentication
 -------------------------
@@ -81,7 +81,7 @@ There are many free and open source software available:
 
 This method doesn't use any mobile phone and can be used offline.
 
-[Read the documentation about the two factor authentication](http://kanboard.net/documentation/2fa)
+[Read the documentation about the two factor authentication](https://kanboard.net/documentation/2fa)
 
 New API procedures
 ------------------
@@ -104,7 +104,7 @@ New API procedures
 - `createAction`
 - `removeAction`
 
-[Read the documentation about the API](http://kanboard.net/documentation/api-json-rpc)
+[Read the documentation about the API](https://kanboard.net/documentation/api-json-rpc)
 
 Other improvements
 ------------------
@@ -130,4 +130,4 @@ Other improvements
 
 Thanks to everybody!
 
-[Download the version 1.0.13](http://kanboard.net/kanboard-1.0.13.zip)
+[Download the version 1.0.13](https://kanboard.net/kanboard-1.0.13.zip)

@@ -48,4 +48,4 @@ Download
 --------
 
 - [Full ChangeLog](https://github.com/fguillot/kanboard/blob/master/ChangeLog)
-- [Download the version 1.0.20](http://kanboard.net/kanboard-1.0.20.zip)
+- [Download the version 1.0.20](https://kanboard.net/kanboard-1.0.20.zip)

@@ -16,32 +16,32 @@ Advanced search syntax
 
 The main change of this version is the new search engine that uses a simple query language.
 
-![Search](http://kanboard.net/screenshots/tour/board-filters.png)
+![Search](https://kanboard.net/screenshots/tour/board-filters.png)
 
 The query language is very useful for advanced search.
 You can find tasks by assignee, swimlane, column, due date, categories, description, etc.
 
 The same search engine is available globally for all projects and it's also used to filter the board.
 
-[Learn more about the search syntax](http://kanboard.net/documentation/search)
+[Learn more about the search syntax](https://kanboard.net/documentation/search)
 
 New project view switcher
 -------------------------
 
 Now, you can switch easily between the board, calendar and list views:
 
-![View Switcher](http://kanboard.net/screenshots/documentation/list-view.png)
+![View Switcher](https://kanboard.net/screenshots/documentation/list-view.png)
 
 Keyboard shortcuts are available too.
 
-[Read the documentation](http://kanboard.net/documentation/project-views)
+[Read the documentation](https://kanboard.net/documentation/project-views)
 
 URL rewriting
 -------------
 
 Kanboard have nice urls now, it's automatically enabled if you already have the Apache mode rewrite enabled.
 
-![Nice url](http://kanboard.net/screenshots/news/1.0.17/nice-urls.png)
+![Nice url](https://kanboard.net/screenshots/news/1.0.17/nice-urls.png)
 
 Some shortcuts are available:
 
@@ -51,7 +51,7 @@ Some shortcuts are available:
 - Go to the list view of the project #8: **/l/8**
 - Go to the project settings for the project id #42: **/p/42**
 
-[More details in the documentation](http://kanboard.net/documentation/nice-urls)
+[More details in the documentation](https://kanboard.net/documentation/nice-urls)
 
 Lead and cycle time
 -------------------
@@ -59,7 +59,7 @@ Lead and cycle time
 - The lead time is the time between the task creation and the date of completion (task closed).
 - The cycle time is the time between the start date and the date of completion.
 
-![Cycle and Lead time](http://kanboard.net/screenshots/documentation/average-lead-cycle-time.png)
+![Cycle and Lead time](https://kanboard.net/screenshots/documentation/average-lead-cycle-time.png)
 
 - Each task have new section analytics that display the lead and cycle time
 - In project reports, you can see a chart with the average lead and cycle time
@@ -69,9 +69,9 @@ Average time into each column
 
 A new project report is available that display the average time spent into each column:
 
-![Average time per column](http://kanboard.net/screenshots/documentation/average-time-spent-into-each-column.png)
+![Average time per column](https://kanboard.net/screenshots/documentation/average-time-spent-into-each-column.png)
 
-[Read the documentation](http://kanboard.net/documentation/analytics)
+[Read the documentation](https://kanboard.net/documentation/analytics)
 
 Automated Docker build
 ----------------------
@@ -80,7 +80,7 @@ Now, each new commit on the repository trigger a new build on the Docker Hub.
 So it's very easy to try the last development version of Kanboard.
 
 - [Kanboard on Docker Hub](https://registry.hub.docker.com/u/kanboard/kanboard/)
-- [Learn more](http://kanboard.net/documentation/docker)
+- [Learn more](https://kanboard.net/documentation/docker)
 
 New features
 ------------
@@ -151,4 +151,4 @@ Download
 --------
 
 - [Full ChangeLog](https://github.com/fguillot/kanboard/blob/master/ChangeLog)
-- [Download the version 1.0.17](http://kanboard.net/kanboard-1.0.17.zip)
+- [Download the version 1.0.17](https://kanboard.net/kanboard-1.0.17.zip)

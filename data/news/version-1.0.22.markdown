@@ -6,7 +6,7 @@ This new release introduce a new authentication and authorization architecture.
 A lot of code refactoring has been made to have an extensible and flexible system.
 It's now possible to write plugins to propose alternative authentication backends.
 
-[Read the documentation to create authentication plugins](http://kanboard.net/documentation/plugins)
+[Read the documentation to create authentication plugins](https://kanboard.net/documentation/plugins)
 
 Groups and Teams
 ----------------
@@ -17,9 +17,9 @@ Then each project manager can authorize projects access to a group while assigni
 
 More over, a new project role have been created "Project Viewer", these users only have read-only access to the project.
 
-Enterprises that use Kanboard can also configure the [LDAP groups synchronization](http://kanboard.net/documentation/ldap-group-sync).
+Enterprises that use Kanboard can also configure the [LDAP groups synchronization](https://kanboard.net/documentation/ldap-group-sync).
 
-[Read the documentation about groups](http://kanboard.net/documentation/groups)
+[Read the documentation about groups](https://kanboard.net/documentation/groups)
 
 New Features
 ------------
@@ -38,15 +38,15 @@ New Features
 New Plugins
 -----------
 
-- [Reverse-Proxy Authentication with LDAP user provider](http://kanboard.net/plugin/reverse-proxy-ldap)
+- [Reverse-Proxy Authentication with LDAP user provider](https://kanboard.net/plugin/reverse-proxy-ldap)
 
 Note: Do not forget to update your plugins.
 
 Breaking Changes
 ----------------
 
-* The [user roles nomenclature has been changed](http://kanboard.net/documentation/roles)
-* LDAP configuration parameters changes ([See documentation](http://kanboard.net/documentation/ldap-parameters))
+* The [user roles nomenclature has been changed](https://kanboard.net/documentation/roles)
+* LDAP configuration parameters changes ([See documentation](https://kanboard.net/documentation/ldap-parameters))
 * SQL table changes:
     - "users" table: added new column "role" and removed columns "is_admin" and "is_project_admin"
     - "project_has_users" table: replaced column "is_owner" with column "role"
@@ -62,5 +62,5 @@ Download
 --------
 
 - [Full ChangeLog](https://github.com/fguillot/kanboard/blob/master/ChangeLog)
-- [Download the version 1.0.22](http://kanboard.net/kanboard-1.0.22.zip)
-- [How to upgrade Kanboard to a new version](http://kanboard.net/documentation/update)
+- [Download the version 1.0.22](https://kanboard.net/kanboard-1.0.22.zip)
+- [How to upgrade Kanboard to a new version](https://kanboard.net/documentation/update)

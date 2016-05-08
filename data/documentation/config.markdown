@@ -8,20 +8,12 @@ Enable/Disable debug mode
 -------------------------
 
 ```php
-define('DEBUG', false);
+define('DEBUG', true);
+define('LOG_DRIVER', 'file'); // Other drivers are: syslog, stdout, stderr or file
 ```
 
+The log driver must be defined if you enable the debug mode.
 The debug mode logs all SQL queries and the time taken to generate pages.
-
-Debug file path
----------------
-
-```php
-define('DEBUG_FILE', __DIR__.'/data/debug.log');
-```
-
-All debug information are saved in this file.
-If you prefer to send logs to `stdout` or `stderr` replace the value by `php://stdout` or `php://stderr`.
 
 Plugins folder
 --------------
@@ -87,6 +79,15 @@ define('DB_NAME', 'kanboard');
 
 // Mysql/Postgres custom port (null = default port)
 define('DB_PORT', null);
+
+// Mysql SSL key
+define('DB_SSL_KEY', null);
+
+// Mysql SSL certificate
+define('DB_SSL_CERT', null);
+
+// Mysql SSL CA
+define('DB_SSL_CA', null);
 ```
 
 LDAP settings
@@ -148,6 +149,13 @@ define('LDAP_USER_ATTRIBUTE_EMAIL', 'mail');
 // LDAP attribute to find groups in user profile
 define('LDAP_USER_ATTRIBUTE_GROUPS', 'memberof');
 
+// LDAP attribute for user avatar image: thumbnailPhoto or jpegPhoto
+define('LDAP_USER_ATTRIBUTE_PHOTO', '');
+
+// LDAP attribute for user language, example: 'preferredlanguage'
+// Put an empty string to disable language sync
+define('LDAP_USER_ATTRIBUTE_LANGUAGE', '');
+
 // Allow automatic LDAP user creation
 define('LDAP_USER_CREATION', true);
 
@@ -169,6 +177,11 @@ define('LDAP_GROUP_BASE_DN', '');
 // LDAP group filter
 // Example for ActiveDirectory: (&(objectClass=group)(sAMAccountName=%s*))
 define('LDAP_GROUP_FILTER', '');
+
+// LDAP user group filter
+// If this filter is configured, Kanboard will search user groups in LDAP_GROUP_BASE_DN
+// Example for OpenLDAP: (&(objectClass=posixGroup)(memberUid=%s))
+define('LDAP_GROUP_USER_FILTER', '');
 
 // LDAP attribute for the group name
 define('LDAP_GROUP_ATTRIBUTE_NAME', 'cn');
@@ -213,13 +226,18 @@ define('ENABLE_XFRAME', true);
 Logging
 -------
 
+By default, Kanboard do not log anything.
+If you want to enable the logging, you have to set a log driver.
+
 ```php
-// Enable syslog logging
-// Set to false to disable syslog
-define('ENABLE_SYSLOG', true);
+// Available log drivers: syslog, stderr, stdout or file
+define('LOG_DRIVER', '');
+
+// Log filename if the log driver is "file"
+define('LOG_FILE', __DIR__.DIRECTORY_SEPARATOR.'data'.DIRECTORY_SEPARATOR.'debug.log');
 ```
 
-Bruteforce protection
+Brute-force protection
 ---------------------
 
 ```php

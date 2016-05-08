@@ -41,13 +41,13 @@ Plugins
 -------
 
 * New plugins:
-    - [Self-Registration](http://kanboard.net/plugin/registration)
-    - [SSL Client Certificate authentication](http://kanboard.net/plugin/client-certificate)
+    - [Self-Registration](https://kanboard.net/plugin/registration)
+    - [SSL Client Certificate authentication](https://kanboard.net/plugin/client-certificate)
 
 * Updated plugins:
-    - [Google Authentication](http://kanboard.net/plugin/google-auth) (Updated API endpoints and added avatar provider)
-    - [Reverse-Proxy Authentication with LDAP](http://kanboard.net/plugin/reverse-proxy-ldap)
-    - [Timetable](http://kanboard.net/plugin/timetable)
+    - [Google Authentication](https://kanboard.net/plugin/google-auth) (Updated API endpoints and added avatar provider)
+    - [Reverse-Proxy Authentication with LDAP](https://kanboard.net/plugin/reverse-proxy-ldap)
+    - [Timetable](https://kanboard.net/plugin/timetable)
 
 Bug fixes
 ---------
@@ -63,5 +63,5 @@ Download
 --------
 
 - [Full ChangeLog](https://github.com/fguillot/kanboard/blob/master/ChangeLog)
-- [Download the version 1.0.27](http://kanboard.net/kanboard-1.0.27.zip)
-- [How to upgrade Kanboard to a new version](http://kanboard.net/documentation/update)
+- [Download the version 1.0.27](https://kanboard.net/kanboard-1.0.27.zip)
+- [How to upgrade Kanboard to a new version](https://kanboard.net/documentation/update)

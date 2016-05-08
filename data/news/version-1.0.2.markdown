@@ -14,4 +14,4 @@ Date: 2014-02-28
 - Display an error message when there is no column for a project
 - Bug fixes
 
-[Download](http://kanboard.net/kanboard-1.0.2.zip)
+[Download](https://kanboard.net/kanboard-1.0.2.zip)

@@ -13,14 +13,14 @@ You can try Kanboard for free on [Heroku](https://www.heroku.com/) cloud platfor
 
 This setup use Postgresql and doesn't require any configuration, everything is done automatically.
 
-To deploy a custom configuration, just follow the [documentation about Heroku](http://kanboard.net/documentation/heroku).
+To deploy a custom configuration, just follow the [documentation about Heroku](https://kanboard.net/documentation/heroku).
 
 Calendars
 ---------
 
 This version introduce calendars:
 
-![Calendar](http://kanboard.net/screenshots/documentation/calendar.png)
+![Calendar](https://kanboard.net/screenshots/documentation/calendar.png)
 
 Calendars are visible on the dashboard, in the project view and from the user page.
 
@@ -33,27 +33,27 @@ Improved board filters
 Now, the filters hide the tasks instead of changing the opacity.
 Moreover, the user interface have been improved to be more flexible:
 
-![Board filters](http://kanboard.net/screenshots/news/1.0.12/board-filters.png)
+![Board filters](https://kanboard.net/screenshots/news/1.0.12/board-filters.png)
 
 You can also filter by recently modified tasks.
 
 New dropdown menu for quick actions:
 
-![Dropdown menu board](http://kanboard.net/screenshots/news/1.0.12/dropdown-menu-board.png)
+![Dropdown menu board](https://kanboard.net/screenshots/news/1.0.12/dropdown-menu-board.png)
 
 Collapsible swimlanes
 ---------------------
 
 Swimlanes can be hidden to save space on the screen:
 
-![Collapsible swimlane](http://kanboard.net/screenshots/news/1.0.12/collapsible-swimlane.png)
+![Collapsible swimlane](https://kanboard.net/screenshots/news/1.0.12/collapsible-swimlane.png)
 
 Task stacking (expand/collapse tasks on the board)
 ---------------------------------------------------
 
 When you have a lot of tasks on the board, it's very useful to collapse tasks:
 
-![Tasks collapsed](http://kanboard.net/screenshots/news/1.0.12/tasks-collasped.png)
+![Tasks collapsed](https://kanboard.net/screenshots/news/1.0.12/tasks-collasped.png)
 
 This feature can be toggled by using the keyboard shortcut **s** or with the board menu.
 
@@ -62,7 +62,7 @@ Dropdown menu for tasks on the board
 
 A new dropdown menu is available for each task on the board for quick editing:
 
-![Dropdown menu tasks](http://kanboard.net/screenshots/news/1.0.12/dropdown-menu-tasks.png)
+![Dropdown menu tasks](https://kanboard.net/screenshots/news/1.0.12/dropdown-menu-tasks.png)
 
 In one click, you can:
 
@@ -78,7 +78,7 @@ Task links and relations
 
 Now, you can link tasks together:
 
-![Task Links](http://kanboard.net/screenshots/documentation/task-links.png)
+![Task Links](https://kanboard.net/screenshots/documentation/task-links.png)
 
 Default relationships are:
 
@@ -101,7 +101,7 @@ More flexible project duplication
 
 Now, you can select which part of the project you want to copy:
 
-![Project duplication](http://kanboard.net/screenshots/news/1.0.12/project-duplication.png)
+![Project duplication](https://kanboard.net/screenshots/news/1.0.12/project-duplication.png)
 
 Keyboard shortcuts
 ------------------
@@ -124,9 +124,9 @@ Better time tracking
 
 The subtask time tracking information are now synchronized with the task time spent and time estimated:
 
-![Subtask time tracking](http://kanboard.net/screenshots/documentation/subtask-time-tracking.png)
+![Subtask time tracking](https://kanboard.net/screenshots/documentation/subtask-time-tracking.png)
 
-More information in the [documentation](http://kanboard.net/documentation/time-tracking)
+More information in the [documentation](https://kanboard.net/documentation/time-tracking)
 
 Sponsored developments
 ----------------------
@@ -164,7 +164,7 @@ Other improvements
 - The dashboard icon is now the Kanboard logo instead of the home icon
 - The age and time spent in the column are shown for each task on the board
 - Columns can have a description in Markdown
-- [Add Bitbucket webhook](http://kanboard.net/documentation/bitbucket-webhooks)
+- [Add Bitbucket webhook](https://kanboard.net/documentation/bitbucket-webhooks)
 - Be able to disable the login form for specific users (for people that use an external authentication)
 - Subtask counts on the board is now a percentage
 - New automatic action: Add a new comment on task move for logging purpose
@@ -179,7 +179,7 @@ Related projects
 
 Here are some external projects made by contributors:
 
-- [FreeBSD port for Kanboard](http://kanboard.net/documentation/freebsd-installation)
+- [FreeBSD port for Kanboard](https://kanboard.net/documentation/freebsd-installation)
 - [CSV2Kanboard by @ashbike](https://github.com/ashbike/csv2kanboard)
 - [Kanboard for Yunohost by @mbugeia](https://github.com/mbugeia/kanboard_ynh)
 - [Trello import script by @matueranet](https://github.com/matueranet/kanboard-import-trello)
@@ -187,4 +187,4 @@ Here are some external projects made by contributors:
 
 **Thanks to all contributors!**
 
-[Download the version 1.0.12](http://kanboard.net/kanboard-1.0.12.zip)
+[Download the version 1.0.12](https://kanboard.net/kanboard-1.0.12.zip)

@@ -7,23 +7,23 @@ Gantt chart for tasks and projects
 
 The main feature of this release is the new Gantt chart:
 
-![Task Gantt chart](http://kanboard.net/screenshots/documentation/gantt-chart-project.png)
+![Task Gantt chart](https://kanboard.net/screenshots/documentation/gantt-chart-project.png)
 
 You can easily plan your projects by dragging and dropping tasks.
 
-- [Documentation about Gantt chart for tasks](http://kanboard.net/documentation/gantt-chart-tasks)
-- [Documentation about Gantt chart for projects](http://kanboard.net/documentation/gantt-chart-projects)
+- [Documentation about Gantt chart for tasks](https://kanboard.net/documentation/gantt-chart-tasks)
+- [Documentation about Gantt chart for projects](https://kanboard.net/documentation/gantt-chart-projects)
 
 Hide and show columns
 ---------------------
 
 It's now possible to hide columns on the board:
 
-![Show and hide columns on the board](http://kanboard.net/screenshots/documentation/board-hide-show-column.png)
+![Show and hide columns on the board](https://kanboard.net/screenshots/documentation/board-hide-show-column.png)
 
 Each column can also scroll vertically now. 
 
-[Documentation](http://kanboard.net/documentation/board-show-hide-columns)
+[Documentation](https://kanboard.net/documentation/board-show-hide-columns)
 
 User API access
 ---------------
@@ -34,16 +34,16 @@ New features can be easily implemented if needed.
 The user API is there to facilitate the creation of mobile or desktop clients. 
 People will be able to use any client without having an API key.
 
-[Documentation about the API](http://kanboard.net/documentation/api-json-rpc)
+[Documentation about the API](https://kanboard.net/documentation/api-json-rpc)
 
 New features
 ------------
 
 * Include documentation in the application
-* [Add Gitlab authentication](http://kanboard.net/documentation/gitlab-authentication)
+* [Add Gitlab authentication](https://kanboard.net/documentation/gitlab-authentication)
 * Add users and categories filters on the board
-* [Add new role "Project Administrator"](http://kanboard.net/documentation/user-management)
-* [Add login bruteforce protection with captcha and account lockdown](http://kanboard.net/documentation/bruteforce-protection)
+* [Add new role "Project Administrator"](https://kanboard.net/documentation/user-management)
+* [Add login bruteforce protection with captcha and account lockdown](https://kanboard.net/documentation/bruteforce-protection)
 * Add new api procedures: getDefaultTaskColor(), getDefaultTaskColors() and getColorList()
 * Add config parameter to define session duration
 * Add config parameter to disable/enable RememberMe authentication
@@ -84,4 +84,4 @@ Download
 --------
 
 - [Full ChangeLog](https://github.com/fguillot/kanboard/blob/master/ChangeLog)
-- [Download the version 1.0.18](http://kanboard.net/kanboard-1.0.18.zip)
+- [Download the version 1.0.18](https://kanboard.net/kanboard-1.0.18.zip)

@@ -33,8 +33,8 @@ Plugins
 -------
 
 * Updated plugins:
-    - [Gitlab Webhook](http://kanboard.net/plugin/gitlab-webhook)
-    - [Mailgun](http://kanboard.net/plugin/mailgun)
+    - [Gitlab Webhook](https://kanboard.net/plugin/gitlab-webhook)
+    - [Mailgun](https://kanboard.net/plugin/mailgun)
 
 Bug fixes
 ---------
@@ -47,5 +47,5 @@ Download
 --------
 
 - [Full ChangeLog](https://github.com/fguillot/kanboard/blob/master/ChangeLog)
-- [Download the version 1.0.26](http://kanboard.net/kanboard-1.0.26.zip)
-- [How to upgrade Kanboard to a new version](http://kanboard.net/documentation/update)
+- [Download the version 1.0.26](https://kanboard.net/kanboard-1.0.26.zip)
+- [How to upgrade Kanboard to a new version](https://kanboard.net/documentation/update)

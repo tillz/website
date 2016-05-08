@@ -14,18 +14,18 @@ To fit with the Kanban methodology, the recurring tasks are not based on a date 
 - The due date can be recalculated automatically
 - Each task records the task id of the parent task that created it and the child task created
 
-![Recurring task](http://kanboard.net/screenshots/documentation/recurring-tasks.png)
+![Recurring task](https://kanboard.net/screenshots/documentation/recurring-tasks.png)
 
-[Documentation](http://kanboard.net/documentation/recurring-tasks)
+[Documentation](https://kanboard.net/documentation/recurring-tasks)
 
 Jabber/XMPP integration
 -----------------------
 
 Such as Slack and Hipchat integrations, notifications can be sent to a Jabber chat room.
 
-![Jabber notification](http://kanboard.net/screenshots/documentation/jabber-notification.png)
+![Jabber notification](https://kanboard.net/screenshots/documentation/jabber-notification.png)
 
-[Documentation](http://kanboard.net/documentation/jabber)
+[Documentation](https://kanboard.net/documentation/jabber)
 
 Improved task links
 -------------------
@@ -40,7 +40,7 @@ Calendar improvements
 - The calendar is able to show all tasks in addition of tasks with a due date.
 - The date of the events can be configured to be the task start date (default) or the creation date.
 
-[Documentation](http://kanboard.net/documentation/calendar)
+[Documentation](https://kanboard.net/documentation/calendar)
 
 iCal feeds
 ----------
@@ -49,9 +49,9 @@ iCal feeds
 - You can export the same information as the internal calendar to any calendar software like Apple Calendar, Google Calendar, Outlook, etc.
 - This is a read-only access, it's not a CalDAV access.
 
-![Edit iCal subscription](http://kanboard.net/screenshots/documentation/apple-calendar-edit-subscription.png)
+![Edit iCal subscription](https://kanboard.net/screenshots/documentation/apple-calendar-edit-subscription.png)
 
-[Documentation](http://kanboard.net/documentation/ical)
+[Documentation](https://kanboard.net/documentation/ical)
 
 Webhooks changes
 ----------------
@@ -59,7 +59,7 @@ Webhooks changes
 - The Kanboard webhook is more flexible now, all internal events are sent to your external program.
 - You can receive events for tasks, subtasks, comments and attachments.
 
-[Documentation](http://kanboard.net/documentation/webhooks)
+[Documentation](https://kanboard.net/documentation/webhooks)
 
 New and modified API procedures
 -------------------------------
@@ -95,7 +95,7 @@ The source code behind the API has been refactored and new procedures have been 
 
 The API authentication can also be done with a custom HTTP header now.
 
-[Documentation](http://kanboard.net/documentation/api-json-rpc)
+[Documentation](https://kanboard.net/documentation/api-json-rpc)
 
 Other improvements
 ------------------
@@ -121,4 +121,4 @@ Other improvements
 
 Thanks to everybody!
 
-[Download the version 1.0.15](http://kanboard.net/kanboard-1.0.15.zip)
+[Download the version 1.0.15](https://kanboard.net/kanboard-1.0.15.zip)

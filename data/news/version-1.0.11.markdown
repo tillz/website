@@ -7,7 +7,7 @@ Here are the new features of the version 1.0.11:
 Swimlanes
 ---------
 
-![Swimlanes](http://kanboard.net/screenshots/features/swimlanes.png)
+![Swimlanes](https://kanboard.net/screenshots/features/swimlanes.png)
 
 Boards can be divided into horizontal lanes. 
 So you can have a better organization of your tasks.
@@ -15,21 +15,21 @@ So you can have a better organization of your tasks.
 By example, in software development you can separate different releases. 
 Swimlanes are configurable in project settings.
 
-Read the [documentation about swimlanes](http://kanboard.net/documentation/swimlanes) for more details.
+Read the [documentation about swimlanes](https://kanboard.net/documentation/swimlanes) for more details.
 
 Project managers
 ----------------
 
 A new user role is introduced: **Project manager**. 
 
-![Project permissions](http://kanboard.net/screenshots/features/permissions.png)
+![Project permissions](https://kanboard.net/screenshots/features/permissions.png)
 
 Any standard users can be promoted project manager. 
 
 - Project managers can change the configuration of the project and access to the reportings.
 - Standard project members can only use the board.
 
-Read the [documentation about project permissions](http://kanboard.net/documentation/project-permissions) for more details.
+Read the [documentation about project permissions](https://kanboard.net/documentation/project-permissions) for more details.
 
 Other improvements
 ------------------
@@ -53,6 +53,6 @@ Focus for the next version
 - Improve the API to be able to create mobile applications easily
 - Integrate the pull-request about the calendar view
 
-[Download the version 1.0.11](http://kanboard.net/kanboard-1.0.11.zip)
+[Download the version 1.0.11](https://kanboard.net/kanboard-1.0.11.zip)
 
 Thanks to everybody!

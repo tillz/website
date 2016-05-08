@@ -23,17 +23,17 @@ Plugins
 -------
 
 * New plugins:
-    - [Bitbucket Webhook](http://kanboard.net/plugin/bitbucket-webhook)
-    - [Github Webhook](http://kanboard.net/plugin/github-webhook)
-    - [Gitlab Webhook](http://kanboard.net/plugin/gitlab-webhook)
-    - [SMS Two-Factor Authentication](http://kanboard.net/plugin/sms-2fa)
+    - [Bitbucket Webhook](https://kanboard.net/plugin/bitbucket-webhook)
+    - [Github Webhook](https://kanboard.net/plugin/github-webhook)
+    - [Gitlab Webhook](https://kanboard.net/plugin/gitlab-webhook)
+    - [SMS Two-Factor Authentication](https://kanboard.net/plugin/sms-2fa)
 * Updated plugins:
-    - [Budget](http://kanboard.net/plugin/budget)
-    - [Hipchat](http://kanboard.net/plugin/hipchat)
-    - [Mailgun](http://kanboard.net/plugin/mailgun)
-    - [Postmark](http://kanboard.net/plugin/postmark)
-    - [Sendgrid](http://kanboard.net/plugin/sendgrid)
-    - [Timetable](http://kanboard.net/plugin/timetable)
+    - [Budget](https://kanboard.net/plugin/budget)
+    - [Hipchat](https://kanboard.net/plugin/hipchat)
+    - [Mailgun](https://kanboard.net/plugin/mailgun)
+    - [Postmark](https://kanboard.net/plugin/postmark)
+    - [Sendgrid](https://kanboard.net/plugin/sendgrid)
+    - [Timetable](https://kanboard.net/plugin/timetable)
 
 Breaking changes
 ----------------
@@ -58,5 +58,5 @@ Download
 --------
 
 - [Full ChangeLog](https://github.com/fguillot/kanboard/blob/master/ChangeLog)
-- [Download the version 1.0.23](http://kanboard.net/kanboard-1.0.23-fix1.zip)
-- [How to upgrade Kanboard to a new version](http://kanboard.net/documentation/update)
+- [Download the version 1.0.23](https://kanboard.net/kanboard-1.0.23-fix1.zip)
+- [How to upgrade Kanboard to a new version](https://kanboard.net/documentation/update)

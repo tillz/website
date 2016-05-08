@@ -25,8 +25,8 @@ People who where using these features need to install the necessary plugins to h
 
 To install a plugin, you just need to unzip the archive in the plugins folder, that's it.
 
-- [List of plugins](http://kanboard.net/plugins)
-- [Plugin API](http://kanboard.net/documentation/plugins)
+- [List of plugins](https://kanboard.net/plugins)
+- [Plugin API](https://kanboard.net/documentation/plugins)
 
 Other new features
 ------------------
@@ -89,4 +89,4 @@ Download
 --------
 
 - [Full ChangeLog](https://github.com/fguillot/kanboard/blob/master/ChangeLog)
-- [Download the version 1.0.19](http://kanboard.net/kanboard-1.0.19.zip)
+- [Download the version 1.0.19](https://kanboard.net/kanboard-1.0.19.zip)

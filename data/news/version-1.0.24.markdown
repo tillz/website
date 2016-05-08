@@ -39,7 +39,7 @@ Plugins
 -------
 
 * Updated plugins:
-    - [Budget](http://kanboard.net/plugin/budget)
+    - [Budget](https://kanboard.net/plugin/budget)
 
 Bug fixes
 ---------
@@ -55,5 +55,5 @@ Download
 --------
 
 - [Full ChangeLog](https://github.com/fguillot/kanboard/blob/master/ChangeLog)
-- [Download the version 1.0.24](http://kanboard.net/kanboard-1.0.24.zip)
-- [How to upgrade Kanboard to a new version](http://kanboard.net/documentation/update)
+- [Download the version 1.0.24](https://kanboard.net/kanboard-1.0.24.zip)
+- [How to upgrade Kanboard to a new version](https://kanboard.net/documentation/update)

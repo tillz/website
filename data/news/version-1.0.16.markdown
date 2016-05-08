@@ -9,14 +9,14 @@ More task colors
 
 Now, there are 16 different colors available:
 
-![More colors](http://kanboard.net/screenshots/news/1.0.16/more-colors.png)
+![More colors](https://kanboard.net/screenshots/news/1.0.16/more-colors.png)
 
 Better time tracking for subtasks
 ---------------------------------
 
 For each subtask, the timer can be stopped/started at any time:
 
-![Subtask timer](http://kanboard.net/screenshots/documentation/subtask-timer.png)
+![Subtask timer](https://kanboard.net/screenshots/documentation/subtask-timer.png)
 
 The timer starts automatically when you toggle the subtask status.
 
@@ -24,12 +24,12 @@ You can always replace the value calculated by editing the subtask or ignore tha
 
 The settings option to enable/disable subtask time tracking is removed. It's always enabled now.
 
-[More information in the documentation](http://kanboard.net/documentation/time-tracking)
+[More information in the documentation](https://kanboard.net/documentation/time-tracking)
 
 Improved email notifications
 ----------------------------
 
-![Notifications](http://kanboard.net/screenshots/documentation/notifications.png)
+![Notifications](https://kanboard.net/screenshots/documentation/notifications.png)
 
 It's now possible to filter the email notifications, instead of receiving all emails, you can choose between several configurations:
 
@@ -59,7 +59,7 @@ Note: **The URL of project feed have changed**, don't forget to update your RSS 
 Replacement of the chart drawing library
 -----------------------------------------
 
-![Cumulative flow diagram](http://kanboard.net/screenshots/documentation/cfd.png)
+![Cumulative flow diagram](https://kanboard.net/screenshots/documentation/cfd.png)
 
 The Javascript library used too draw charts have been replaced by C3JS. Diagrams are easier to generate and they are looking better.
 
@@ -125,4 +125,4 @@ Other improvements and fixes
 
 See you next time for a better Kanboard :)
 
-[Download the version 1.0.16](http://kanboard.net/kanboard-1.0.16.zip)
+[Download the version 1.0.16](https://kanboard.net/kanboard-1.0.16.zip)

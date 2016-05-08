@@ -10,14 +10,14 @@ There are several methods to do that, I choose the easiest method to implement: 
 
 Basically, you have the choice between 3 SMTP providers:
 
-- [Mailgun](http://kanboard.net/documentation/mailgun)
-- [Sendgrid](http://kanboard.net/documentation/sendgrid)
-- [Postmark](http://kanboard.net/documentation/postmark)
+- [Mailgun](https://kanboard.net/documentation/mailgun)
+- [Sendgrid](https://kanboard.net/documentation/sendgrid)
+- [Postmark](https://kanboard.net/documentation/postmark)
 
 These services handle incoming emails without having to configure any SMTP server.
 Emails are received by Kanboard via a webhook.
 
-[Documentation](http://kanboard.net/documentation/create-tasks-by-email)
+[Documentation](https://kanboard.net/documentation/create-tasks-by-email)
 
 Screenshots
 -----------
@@ -25,11 +25,11 @@ Screenshots
 It's now possible to insert a screenshot or copy and paste any image directly in Kanboard.
 This feature is very useful for bug reports by example.
 
-![Screenshot page](http://kanboard.net/screenshots/documentation/task-screenshot.png)
+![Screenshot page](https://kanboard.net/screenshots/documentation/task-screenshot.png)
 
 Note: **This feature doesn't works with all browsers**.
 
-[Documentation](http://kanboard.net/documentation/screenshots)
+[Documentation](https://kanboard.net/documentation/screenshots)
 
 Burndown chart
 --------------
@@ -37,11 +37,11 @@ Burndown chart
 The burndown chart is available for each project.
 This diagram is a graphical representation of work left to do versus time.
 
-![Burndown chart](http://kanboard.net/screenshots/documentation/burndown-chart.png)
+![Burndown chart](https://kanboard.net/screenshots/documentation/burndown-chart.png)
 
 The sum of task complexity is recorded for each day.
 
-[Documentation](http://kanboard.net/documentation/analytics)
+[Documentation](https://kanboard.net/documentation/analytics)
 
 Behaviour changes
 -----------------
@@ -73,4 +73,4 @@ Other improvements
 
 Thanks to everybody!
 
-[Download the version 1.0.14](http://kanboard.net/kanboard-1.0.14.zip)
+[Download the version 1.0.14](https://kanboard.net/kanboard-1.0.14.zip)

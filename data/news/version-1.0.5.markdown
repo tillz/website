@@ -24,4 +24,4 @@ Date: 2014-05-27
 - Code refactoring (add autoloader and change files organization)
 - Bug fixes
 
-[Download](http://kanboard.net/kanboard-1.0.5.zip)
+[Download](https://kanboard.net/kanboard-1.0.5.zip)

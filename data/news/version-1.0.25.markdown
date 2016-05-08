@@ -13,7 +13,7 @@ New features
 * Add Greek translation
 * Add automatic actions to close tasks with no activity
 * Add automatic actions to send an email when there is no activity on a task
-* Regroup all daily background tasks in one command: [cronjob](http://kanboard.net/documentation/cronjob)
+* Regroup all daily background tasks in one command: [cronjob](https://kanboard.net/documentation/cronjob)
 * Add task dropdown menu on listing pages
 
 Improvements
@@ -48,17 +48,17 @@ Plugins
 -------
 
 * New plugins:
-    - [RocketChat](http://kanboard.net/plugin/rocketchat)
-    - [Google Authentication](http://kanboard.net/plugin/google-auth)
-    - [Github Authentication](http://kanboard.net/plugin/github-auth)
-    - [Gitlab Authentication](http://kanboard.net/plugin/gitlab-auth)
+    - [RocketChat](https://kanboard.net/plugin/rocketchat)
+    - [Google Authentication](https://kanboard.net/plugin/google-auth)
+    - [Github Authentication](https://kanboard.net/plugin/github-auth)
+    - [Gitlab Authentication](https://kanboard.net/plugin/gitlab-auth)
 * Updated plugins:
-    - [Bitbucket Webhook](http://kanboard.net/plugin/bitbucket-webhook)
-    - [Github Webhook](http://kanboard.net/plugin/github-webhook)
-    - [Gitlab Webhook](http://kanboard.net/plugin/gitlab-webhook)
-    - [Gogs Webhook](http://kanboard.net/plugin/gogs-webhook)
-    - [Budget](http://kanboard.net/plugin/budget)
-    - [Timetable](http://kanboard.net/plugin/timetable)
+    - [Bitbucket Webhook](https://kanboard.net/plugin/bitbucket-webhook)
+    - [Github Webhook](https://kanboard.net/plugin/github-webhook)
+    - [Gitlab Webhook](https://kanboard.net/plugin/gitlab-webhook)
+    - [Gogs Webhook](https://kanboard.net/plugin/gogs-webhook)
+    - [Budget](https://kanboard.net/plugin/budget)
+    - [Timetable](https://kanboard.net/plugin/timetable)
 
 Bug fixes
 ---------
@@ -70,5 +70,5 @@ Download
 --------
 
 - [Full ChangeLog](https://github.com/fguillot/kanboard/blob/master/ChangeLog)
-- [Download the version 1.0.25](http://kanboard.net/kanboard-1.0.25.zip)
-- [How to upgrade Kanboard to a new version](http://kanboard.net/documentation/update)
+- [Download the version 1.0.25](https://kanboard.net/kanboard-1.0.25.zip)
+- [How to upgrade Kanboard to a new version](https://kanboard.net/documentation/update)
