@@ -147,6 +147,16 @@ Budget planning based on sub-task time tracking:
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-mattermost/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-mattermost/releases/download/v1.0.2/Mattermost-1.0.2.zip',
     ],
+    'milestone' => [
+         'title' => 'Milestone',
+         'version' => '1.0.28',
+         'author' => 'Olivier Maridat',
+         'license' => 'MIT',
+         'description' => 'Add a section for milestones to show their related tasks.',
+         'homepage' => 'https://github.com/oliviermaridat/kanboard-milestone-plugin',
+         'readme' => 'https://raw.githubusercontent.com/oliviermaridat/kanboard-milestone-plugin/master/README.md',
+         'download' => 'https://github.com/oliviermaridat/kanboard-milestone-plugin/releases/download/v1.0.28-1/Milestone-1.0.28-1.zip',
+     ],
     'postmark' => [
         'title' => 'Postmark',
         'version' => '1.0.2',
