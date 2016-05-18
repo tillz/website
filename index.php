@@ -99,12 +99,12 @@ function load_posts()
     return array_values($news);
 }
 
-function load_plugins($load_remote_content = false)
+function load_plugins($load_plugin = '')
 {
     $plugins = include(DATA_PATH.'plugins.php');
 
-    foreach ($plugins as &$plugin) {
-        if ($load_remote_content) {
+    foreach ($plugins as $key => &$plugin) {
+        if ($load_plugin !== '' && $load_plugin === $key) {
             $readme = file_get_contents($plugin['readme']);
             $lines = explode("\n", $readme);
             array_shift($lines);
@@ -308,7 +308,7 @@ $app->get('/plugins', function () use ($app) {
 
 $app->get('/plugin/{plugin}', function ($plugin) use ($app) {
     return cache($app, function () use ($app, $plugin) {
-        $plugins = load_plugins(true);
+        $plugins = load_plugins($plugin);
 
         if (! isset($plugins[$plugin])) {
             return $app->abort(404);
