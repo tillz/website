@@ -54,7 +54,7 @@ Budget planning based on sub-task time tracking:
          'license' => 'MIT',
          'description' => 'This plugin adds a coverimage function to the board.',
          'homepage' => 'https://github.com/BlueTeck/kanboard_plugin_coverimage',
-         'readme' => 'https://github.com/BlueTeck/kanboard_plugin_coverimage/blob/master/README.md',
+         'readme' => 'https://raw.githubusercontent.com/BlueTeck/kanboard_plugin_coverimage/master/README.md',
          'download' => 'https://github.com/BlueTeck/kanboard_plugin_coverimage/archive/1.0.28.0.zip',
      ],
     'github-auth' => [
@@ -164,7 +164,7 @@ Budget planning based on sub-task time tracking:
          'license' => 'MIT',
          'description' => 'This plugin adds a GUI to manage custom metadata for task, projects and user.',
          'homepage' => 'https://github.com/BlueTeck/kanboard_plugin_metadata',
-         'readme' => 'https://github.com/BlueTeck/kanboard_plugin_metadata/blob/master/README.md',
+         'readme' => 'https://raw.githubusercontent.com/BlueTeck/kanboard_plugin_metadata/master/README.md',
          'download' => 'https://github.com/BlueTeck/kanboard_plugin_metadata/archive/1.0.3.zip',
      ],
     'milestone' => [
@@ -184,7 +184,7 @@ Budget planning based on sub-task time tracking:
          'license' => 'MIT',
          'description' => 'Overwrite default translations without touching kanboard files.',
          'homepage' => 'https://github.com/BlueTeck/kanboard_plugin_overwrite_translation',
-         'readme' => 'https://github.com/BlueTeck/kanboard_plugin_overwrite_translation/blob/master/README.md',
+         'readme' => 'https://raw.githubusercontent.com/BlueTeck/kanboard_plugin_overwrite_translation/master/README.md',
          'download' => 'https://github.com/BlueTeck/kanboard_plugin_overwrite_translation/archive/1.0.28.0.zip',
      ],
     'postmark' => [
