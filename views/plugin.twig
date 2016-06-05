@@ -7,7 +7,7 @@
     <section id="plugins">
         <article class="plugin-summary">
             <h1>Plugin {{ plugin.title }}</h1>
-            <p class="plugin-info"><strong>Author:</strong> {{ plugin.author }} | <strong>License:</strong> {{ plugin.license }} | <strong>Version:</strong> {{ plugin.version }}</p>
+            <p class="plugin-info"><strong>Author:</strong> {{ plugin.author }} | <strong>License:</strong> {{ plugin.license }} | <strong>Version:</strong> {{ plugin.version }} | <strong>Kanboard</strong> >= {{  plugin.compatible_version }}</p>
 
             <div class="plugin-description">
                 {{ plugin.description_markdown|raw }}
