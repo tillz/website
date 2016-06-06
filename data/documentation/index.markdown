@@ -105,11 +105,14 @@ Technical details
 
 ### Configuration
 
+- [Performances](performances.markdown)
 - [Daily background job](cronjob.markdown)
+- [Background Worker](worker.markdown)
 - [Config file](config.markdown)
 - [Environment variables](env.markdown)
 - [Email configuration](email-configuration.markdown)
 - [URL rewriting](nice-urls.markdown)
+- [Plugin Directory](plugin-directory.markdown)
 
 ### Database
 

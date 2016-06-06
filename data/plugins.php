@@ -2,7 +2,7 @@
 
 return [
     'beanstalk' => [
-        'title' => 'Beanstalkd',
+        'title' => 'Beanstalk',
         'version' => '1.0.0',
         'author' => 'Frédéric Guillot',
         'license' => 'MIT',
@@ -260,7 +260,7 @@ Budget planning based on sub-task time tracking:
         'compatible_version' => '1.0.29',
     ],
     'rabbitmq' => [
-        'title' => 'RabbitMQ Queue Driver',
+        'title' => 'RabbitMQ',
         'version' => '1.0.0',
         'author' => 'Frédéric Guillot',
         'license' => 'MIT',
