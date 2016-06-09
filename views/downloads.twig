@@ -7,14 +7,24 @@
     <article id="download">
         <h1>Download</h1>
         <dl>
-            <dt>Stable version (v{{ app.version }})</dt>
-            <dd><a href="/kanboard-latest.zip">kanboard-latest.zip</a> (released on {{ app.release_date }})</dd>
+            <dt>Stable version</dt>
+            <dd>
+                <a href="/kanboard-{{ app.version }}.zip">kanboard-{{ app.version }}.zip</a> [<a href="/kanboard-{{ app.version }}.zip.asc">PGP</a>] [released on {{ app.release_date }}]
+            </dd>
             <dt>Development version (Git Repository)</dt>
             <dd><a href="https://github.com/fguillot/kanboard">https://github.com/fguillot/kanboard</a></dd>
         </dl>
         <p class="alert">
             Do not forget to read the <a href="/documentation/installation">installation instructions</a> and check the <a href="/documentation/requirements">requirements</a>.
         </p>
+    </article>
+
+    <article>
+        <h2>Verify archive signature</h2>
+        <ol>
+            <li>Download the public key: <code>gpg --keyserver hkp://keys.gnupg.net --recv-keys 894226ED</code></li>
+            <li>Verify signature: <code>gpg --verify kanboard-{{ app.version }}.zip.asc kanboard-{{ app.version }}.zip</code></li>
+        </ol>
     </article>
 
     {% include 'donation.twig' %}
