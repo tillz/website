@@ -225,15 +225,15 @@ Budget planning based on sub-task time tracking:
      ],
     'milestone' => [
          'title' => 'Milestone',
-         'version' => '1.0.28',
+         'version' => '1.0.29-1',
          'author' => 'Olivier Maridat',
          'license' => 'MIT',
          'description' => 'Add a section for milestones to show their related tasks.',
          'homepage' => 'https://github.com/oliviermaridat/kanboard-milestone-plugin',
          'readme' => 'https://raw.githubusercontent.com/oliviermaridat/kanboard-milestone-plugin/master/README.md',
-         'download' => 'https://github.com/oliviermaridat/kanboard-milestone-plugin/releases/download/v1.0.28-1/Milestone-1.0.28-1.zip',
+         'download' => 'https://github.com/oliviermaridat/kanboard-milestone-plugin/releases/download/v1.0.29-1/Milestone-1.0.29-1.zip',
          'remote_install' => true,
-         'compatible_version' => '1.0.28',
+         'compatible_version' => '1.0.30',
      ],
     'overwrite_translation' => [
          'title' => 'Overwrite Translation',
