@@ -384,5 +384,16 @@ Budget planning based on sub-task time tracking:
         'download' => 'https://github.com/EpocDotFr/kanboard-wunderlist/releases/tag/v1.0.1',
         'remote_install' => false,
         'compatible_version' => '1.0.23',
+    ],
+    'relationgraph' => [
+        'title' => 'Relationgraph',
+        'version' => '0.1.2',
+        'author' => 'Xavier Vidal',
+        'license' => 'MIT',
+        'description' => 'Show relations between tasks using a graph library',
+        'homepage' => 'https://github.com/xavividal/kanboard-plugin-relation-graph',
+        'readme' => 'https://github.com/xavividal/kanboard-plugin-relation-graph/master/README.md',
+        'remote_install' => true,
+        'compatible_version' => '1.0.30',
     ]
 ];
