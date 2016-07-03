@@ -19,6 +19,18 @@ Start PHP webserver on localhost:
 make serve
 ```
 
+Build Docker image:
+
+```bash
+make docker-image
+```
+
+Start Docker container:
+
+```bash
+make docker-run
+```
+
 API
 ---
 
