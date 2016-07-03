@@ -63,3 +63,23 @@ How to add a new plugin to the list?
 ------------------------------------
 
 Update the file `data/plugins.php` and send a pull-request.
+
+- `compatible_version` is the latest stable version tested with your plugin.
+- `remote_install` allows people to install the plugin from the Kanboard user interface
+
+Your plugin archive must contains a folder with the plugin name (namespace), example:
+
+```
+Registration-1.0.4.zip
+└── Registration
+    ├── Controller
+    ├── Locale
+    │   └── fr_FR
+    ├── Template
+    │   ├── ...
+    ├── Test
+    │   └── ...
+    └── ...
+```
+
+The archive will be exctracted into the folder `plugins` to have `plugins/Registration`.
