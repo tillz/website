@@ -88,7 +88,7 @@ Budget planning based on sub-task time tracking:
          'homepage' => 'https://github.com/BlueTeck/kanboard_plugin_coverimage',
          'readme' => 'https://raw.githubusercontent.com/BlueTeck/kanboard_plugin_coverimage/master/README.md',
          'download' => 'https://github.com/BlueTeck/kanboard_plugin_coverimage/archive/1.0.29.0.zip',
-         'remote_install' => true,
+         'remote_install' => false,
          'compatible_version' => '1.0.30',
     ],
     'github-auth' => [
@@ -220,7 +220,7 @@ Budget planning based on sub-task time tracking:
          'homepage' => 'https://github.com/BlueTeck/kanboard_plugin_metadata',
          'readme' => 'https://raw.githubusercontent.com/BlueTeck/kanboard_plugin_metadata/master/README.md',
          'download' => 'https://github.com/BlueTeck/kanboard_plugin_metadata/archive/1.0.29.0.zip',
-         'remote_install' => true,
+         'remote_install' => false,
          'compatible_version' => '1.0.30',
      ],
     'milestone' => [
@@ -292,7 +292,7 @@ Budget planning based on sub-task time tracking:
         'homepage' => 'https://github.com/kanboard/plugin-reverse-proxy-ldap',
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-reverse-proxy-ldap/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-reverse-proxy-ldap/releases/download/v1.0.2/ReverseProxyLdap-1.0.2.zip',
-        'remote_install' => true,
+        'remote_install' => false,
         'compatible_version' => '1.0.30',
     ],
     'rocketchat' => [
