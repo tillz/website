@@ -4,7 +4,7 @@ Date: 2016-07-03
 
 The main change of this release are tags.
 Each task can have multiple tags.
-Tags can specific for each project or global to the application.
+Tags can be specific for each project or global to the application.
 
 New features
 ------------
