@@ -393,8 +393,8 @@ Budget planning based on sub-task time tracking:
         'description' => 'Show relations between tasks using a graph library',
         'homepage' => 'https://github.com/xavividal/kanboard-plugin-relationgraph',
         'readme' => 'https://raw.githubusercontent.com/xavividal/kanboard-plugin-relationgraph/master/README.md',
-        'download' => 'https://github.com/xavividal/kanboard-plugin-relationgraph/archive/0.1.3.zip',
-        'remote_install' => false,
+        'download' => 'https://github.com/xavividal/kanboard-plugin-relationgraph/releases/download/0.1.3/0.1.3.zip',
+        'remote_install' => true,
         'compatible_version' => '1.0.30',
     ]
 ];
