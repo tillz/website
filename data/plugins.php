@@ -117,13 +117,13 @@ Budget planning based on sub-task time tracking:
     ],
     'gitlab-auth' => [
         'title' => 'Gitlab Authentication',
-        'version' => '1.0.2',
+        'version' => '1.0.3',
         'author' => 'Frédéric Guillot',
         'license' => 'MIT',
         'description' => 'Use Gitlab as authentication provider.',
         'homepage' => 'https://github.com/kanboard/plugin-gitlab-auth',
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-gitlab-auth/master/README.md',
-        'download' => 'https://github.com/kanboard/plugin-gitlab-auth/releases/download/v1.0.2/GitlabAuth-1.0.2.zip',
+        'download' => 'https://github.com/kanboard/plugin-gitlab-auth/releases/download/v1.0.3/GitlabAuth-1.0.3.zip',
         'remote_install' => true,
         'compatible_version' => '1.0.31',
     ],
@@ -394,7 +394,7 @@ Budget planning based on sub-task time tracking:
         'homepage' => 'https://github.com/xavividal/kanboard-plugin-relationgraph',
         'readme' => 'https://raw.githubusercontent.com/xavividal/kanboard-plugin-relationgraph/master/README.md',
         'download' => 'https://github.com/xavividal/kanboard-plugin-relationgraph/releases/download/0.1.3/0.1.3.zip',
-        'remote_install' => true,
+        'remote_install' => false,
         'compatible_version' => '1.0.30',
     ]
 ];
