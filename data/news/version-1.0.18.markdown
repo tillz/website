@@ -83,5 +83,5 @@ Bug fixes
 Download
 --------
 
-- [Full ChangeLog](https://github.com/fguillot/kanboard/blob/master/ChangeLog)
+- [Full ChangeLog](https://github.com/kanboard/kanboard/blob/master/ChangeLog)
 - [Download the version 1.0.18](https://kanboard.net/kanboard-1.0.18.zip)

@@ -23,8 +23,8 @@ Date: 2014-05-04
 - Improve task duplication
 - New default config file: `config.default.php`
 - Update Vagrant configuration to use Ubuntu 14.04
-- Add support for [Travis CI](https://travis-ci.org/fguillot/kanboard): automatic unit testing across 3 different PHP versions (5.3, 5.4 and 5.5)
-- Configuration of [Scrutinizer](https://scrutinizer-ci.com/g/fguillot/kanboard/), a code quality analysis tool
+- Add support for [Travis CI](https://travis-ci.org/kanboard/kanboard): automatic unit testing across 3 different PHP versions (5.3, 5.4 and 5.5)
+- Configuration of [Scrutinizer](https://scrutinizer-ci.com/g/kanboard/kanboard/), a code quality analysis tool
 - More documentation
 - Bug fixes
 

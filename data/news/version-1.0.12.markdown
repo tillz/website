@@ -9,7 +9,7 @@ Heroku one-click install button
 
 You can try Kanboard for free on [Heroku](https://www.heroku.com/) cloud platform.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/fguillot/kanboard)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/kanboard/kanboard)
 
 This setup use Postgresql and doesn't require any configuration, everything is done automatically.
 

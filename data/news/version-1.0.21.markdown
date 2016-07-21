@@ -56,6 +56,6 @@ Bug fixes
 Download
 --------
 
-- [Full ChangeLog](https://github.com/fguillot/kanboard/blob/master/ChangeLog)
+- [Full ChangeLog](https://github.com/kanboard/kanboard/blob/master/ChangeLog)
 - [Download the version 1.0.21](https://kanboard.net/kanboard-1.0.21.zip)
 - [How to update Kanboard to a new version](https://kanboard.net/documentation/update)
