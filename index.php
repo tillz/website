@@ -454,7 +454,7 @@ $app->get('/kanboard-{version}.zip', function ($version) use ($app) {
     }
 
     return $app->redirect('https://s3.amazonaws.com/kanboard-releases/kanboard-'.$version.'.zip', 302);
-});
+})->assert('version', '.+');;
 
 $app->get('/kanboard-{version}.zip.asc', function ($version) use ($app) {
     if ($version === 'latest') {
@@ -462,6 +462,6 @@ $app->get('/kanboard-{version}.zip.asc', function ($version) use ($app) {
     }
 
     return $app->redirect('https://s3.amazonaws.com/kanboard-releases/kanboard-'.$version.'.zip.asc', 302);
-});
+})->assert('version', '.+');;
 
 $app->run();
