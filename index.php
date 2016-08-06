@@ -24,17 +24,17 @@ function get_title($file)
     return $line;
 }
 
-function markdown_replace_url(array $matches)
+function doc_replace_url(array $matches)
 {
     return '(/documentation/'.str_replace('.markdown', '', $matches[1]).')';
 }
 
-function markdown_replace_image_url(array $matches)
+function doc_replace_image_url(array $matches)
 {
     return '(/screenshots/documentation/'.$matches[1].')';
 }
 
-function load_markdown_page($directory, $file)
+function doc_page($directory, $file)
 {
     $file = basename($file);
     $directory = basename($directory);
@@ -45,8 +45,8 @@ function load_markdown_page($directory, $file)
     }
 
     $markdown = file_get_contents($filename);
-    $markdown = preg_replace_callback('/\((.*.markdown)\)/', 'markdown_replace_url', $markdown);
-    $markdown = preg_replace_callback('/\((screenshots.*\.png)\)/', 'markdown_replace_image_url', $markdown);
+    $markdown = preg_replace_callback('/\((.*.markdown)\)/', 'doc_replace_url', $markdown);
+    $markdown = preg_replace_callback('/\((screenshots.*\.png)\)/', 'doc_replace_image_url', $markdown);
 
     return [
         'menu' => $directory,
@@ -55,20 +55,26 @@ function load_markdown_page($directory, $file)
     ];
 }
 
-function load_post($filename, $url)
+function page($filename, $url = '')
 {
     $url = basename($url);
     $lines = file($filename);
     $date = '';
     $title = '';
+    $description = '';
+    $language = 'en_US';
 
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0, $ilen = count($lines); $i < $ilen; $i++) {
         $line = array_shift($lines);
 
         if (strpos($line, 'Date: ') === 0) {
             $date = trim(substr($line, 6));
         } elseif (strpos($line, 'Title: ') === 0) {
             $title = trim(substr($line, 7));
+        } elseif (strpos($line, 'Description: ') === 0) {
+            $description = trim(substr($line, 13));
+        } elseif (strpos($line, 'Language: ') === 0) {
+            $language = trim(substr($line, 10));
         } elseif (strpos($line, '---') === 0) {
             break;
         }
@@ -77,19 +83,21 @@ function load_post($filename, $url)
     return [
         'url' => $url,
         'content' => Parsedown::instance()->text(implode('', $lines)),
-        'date' => new DateTime($date),
+        'date' => empty($date) ? null : new DateTime($date),
         'title' => $title,
+        'description' => $description ?: $title,
+        'language' => $language,
     ];
 }
 
-function load_posts()
+function news()
 {
     $news = [];
     $dir = new DirectoryIterator(DATA_PATH.'news');
 
     foreach ($dir as $fileinfo) {
         if ($fileinfo->getExtension() === 'markdown') {
-            $post = load_post($fileinfo->getRealPath(), $fileinfo->getBasename('.markdown'));
+            $post = page($fileinfo->getRealPath(), $fileinfo->getBasename('.markdown'));
             $news[$post['date']->format('Y-m-d')] = $post;
         }
     }
@@ -287,6 +295,10 @@ $app->get('/hosting', function () use ($app) {
     return cache($app, function () use ($app) {
         return $app['twig']->render('hosting.twig', [
             'menu' => 'hosting',
+            'page' => page(implode(DIRECTORY_SEPARATOR, [DATA_PATH, 'pages', 'en_US', 'hosting.markdown'])),
+            'price' => MONTHLY_PRICE,
+            'trial_period' => TRIAL_PERIOD,
+            'signup_url' => SIGNUP_URL,
         ]);
     });
 });
@@ -323,7 +335,7 @@ $app->get('/plugin/{plugin}', function ($plugin) use ($app) {
 
 $app->get('/documentation', function () use ($app) {
     return cache($app, function () use ($app) {
-        $page = load_markdown_page('documentation', 'index');
+        $page = doc_page('documentation', 'index');
 
         if ($page === false) {
             return $app->abort(404);
@@ -357,7 +369,7 @@ $app->get('/documentation/{file}', function ($file) use ($app) {
     }
 
     return cache($app, function () use ($app, $file) {
-        $page = load_markdown_page('documentation', $file);
+        $page = doc_page('documentation', $file);
 
         if ($page === false) {
             return $app->abort(404);
@@ -383,7 +395,7 @@ $app->get('/news', function () use ($app) {
     return cache($app, function () use ($app) {
         return $app['twig']->render('posts.twig', [
             'menu' => 'news',
-            'posts' => load_posts(),
+            'posts' => news(),
         ]);
     });
 });
@@ -392,7 +404,7 @@ $app->get('/news/{file}', function ($file) use ($app) {
     return cache($app, function () use ($app, $file) {
         return $app['twig']->render('post.twig', [
             'menu' => 'news',
-            'post' => load_post(DATA_PATH . 'news' . DIRECTORY_SEPARATOR . $file . '.markdown', $file),
+            'post' => page(DATA_PATH . 'news' . DIRECTORY_SEPARATOR . $file . '.markdown', $file),
         ]);
     });
 });
@@ -410,7 +422,7 @@ $app->get('/feed', function () use ($app) {
             ->withSiteUrl('https://kanboard.net/')
             ->withDate(new DateTime());
 
-        foreach (load_posts() as $post) {
+        foreach (news() as $post) {
             $feedBuilder
                 ->withItem(AtomItemBuilder::create($feedBuilder)
                     ->withTitle($post['title'])

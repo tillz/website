@@ -271,6 +271,11 @@ nav .active a {
     float: left;
 }
 
+.highlighted-menu {
+    color: #000;
+    border-bottom: 1px dotted red;
+}
+
 /* news */
 #news li {
     margin-bottom: 10px;
@@ -469,6 +474,44 @@ h2.baseline {
 
 .flag.flag-fr {
     background-position: 0 -11px;
+}
+
+#managed-hosting-features {
+    border-left: 3px dotted #eee;
+    padding-left: 20px;
+    margin-left: 20px;
+}
+
+#managed-hosting-features a.btn {
+    font-size: 1.2em;
+}
+
+#managed-hosting-description {
+    border: 2px dotted #bbb;
+    padding: 20px;
+    padding-bottom: 0;
+    margin-top: 5px;
+    font-size: 110%;
+}
+
+#managed-hosting-description p {
+    color: #656771;
+    line-height: 1.6em;
+    font-size: 110%;
+    margin-bottom: 20px;
+    margin-left: 25px;
+    border: none;
+    padding-left: 0;
+}
+
+#managed-hosting-description h3 {
+    color: #57b97c;
+    line-height: 32px;
+}
+
+#managed-hosting-description h2 {
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 @media only screen and (max-height: 480px), (max-width: 480px) {

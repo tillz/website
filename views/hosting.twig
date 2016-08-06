@@ -1,24 +1,43 @@
 {% extends "layout.twig" %}
 
-{% block title %}Kanboard Hosting{% endblock %}
-{% block description %}Kanboard as a service{% endblock %}
+{% block title %}{{ page.title }}{% endblock %}
+{% block description %}{{ page.description }}{% endblock %}
 
 {% block content %}
     <article id="managed-hosting">
-        <h1>Kanboard Managed Hosting</h1>
+        <h1>{{ page.title }}</h1>
 
-        <p class="alert">Kanboard managed hosting is not ready yet, subscribe to be notified.</p>
+        <p>We made Kanboard, and we can host it for you. Kanboard hosting is made for small teams.</p>
 
-        <form id="newsletter" method="post" action="/subscribe/hosting">
-            <h3>Are you interested by a hosted version of Kanboard?</h3>
-            <input type="email" name="email" required placeholder="Enter your email address">
-            <input type="submit" value="Yes, keep me in touch" class="btn btn-blue">
-            <p>We will never spam and your privacy is guaranteed.</p>
-        </form>
+        <p class="alert">Kanboard Hosting is in Beta!</p>
+
+        <div id="managed-hosting-features">
+            <p>
+                The subscription is <strong>only ${{ price }}/month</strong> with a <strong>free trial period of {{ trial_period }} days</strong>.
+            </p>
+
+            <ul>
+                <li>Dedicated instance and database</li>
+                <li>Unlimited users and projects</li>
+                <li>Unlimited attachments and storage</li>
+                <li>Compatible with official plugins</li>
+                <li>Automatic updates and backups</li>
+                <li>Email notifications</li>
+                <li>SSL Support</li>
+            </ul>
+
+            <p class="align-center">
+                <a href="{{ signup_url }}" class="btn btn-blue" id="subscribe-link">Try Kanboard for free</a>
+            </p>
+        </div>
+
+        <div id="managed-hosting-description">
+            {{ page.content|raw }}
+        </div>
     </article>
 
     <article id="hosting-providers">
-        <h2>Web-hosting for Kanboard</h2>
+        <h2>Other web-hosting for Kanboard</h2>
 
         <dl>
             <dt><a href="https://framaboard.org/">Framaboard</a></dt>
