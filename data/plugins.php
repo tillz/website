@@ -397,4 +397,16 @@ Budget planning based on sub-task time tracking:
         'remote_install' => false,
         'compatible_version' => '1.0.23',
     ],
+    'timetrackingeditor' => [
+      'title' => 'timetrackingeditor',
+      'version' => '1.0.0',
+      'author' => 'Stinnux',
+      'license' => 'MIT',
+      'description' => 'Manually Add and Edit Time Tracking entries, add comments and select billable/not billable to time tracking entries. Export Time Tracking Entries as HTML',
+      'homepage' => 'https://github.com/stinnux/kanboard-Timetrackingeditor',
+      'readme' => 'https://raw.githubusercontent.com/stinnux/kanboard-Timetrackingeditor/master/README.md',
+      'download' => 'https://github.com/stinnux/kanboard-Timetrackingeditor/releases/download/1.0.0/Timetrackingeditor-1.0.0.zip',
+      'remote_install' => true,
+      'compatible_version' => '1.0.32',
+    ]
 ];
