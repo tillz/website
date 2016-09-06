@@ -11,7 +11,7 @@ return [
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-beanstalk/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-beanstalk/releases/download/v1.0.0/Beanstalk-1.0.0.zip',
         'remote_install' => true,
-        'compatible_version' => '1.0.32',
+        'compatible_version' => '>=1.0.32',
     ],
     's3' => [
         'title' => 'Amazon S3 Storage',
@@ -23,7 +23,7 @@ return [
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-s3/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-s3/releases/download/v1.0.2/S3-1.0.2.zip',
         'remote_install' => true,
-        'compatible_version' => '1.0.32',
+        'compatible_version' => '>=1.0.32',
     ],
     'bitbucket-webhook' => [
         'title' => 'Bitbucket Webhook',
@@ -35,7 +35,7 @@ return [
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-bitbucket-webhook/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-bitbucket-webhook/releases/download/v1.0.3/BitbucketWebhook-1.0.3.zip',
         'remote_install' => true,
-        'compatible_version' => '1.0.32',
+        'compatible_version' => '>=1.0.32',
     ],
     'budget' => [
         'title' => 'Budget Planning',
@@ -53,7 +53,7 @@ Budget planning based on sub-task time tracking:
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-budget/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-budget/releases/download/v1.0.8/Budget-1.0.8.zip',
         'remote_install' => true,
-        'compatible_version' => '1.0.32',
+        'compatible_version' => '>=1.0.32',
     ],
     'client-certificate' => [
         'title' => 'Client SSL Certificate Authentication',
@@ -65,7 +65,7 @@ Budget planning based on sub-task time tracking:
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-client-certificate/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-client-certificate/releases/download/v1.0.0/ClientCertificate-1.0.0.zip',
         'remote_install' => false,
-        'compatible_version' => '1.0.32',
+        'compatible_version' => '>=1.0.32',
     ],
     'database-storage' => [
         'title' => 'Database Storage',
@@ -77,7 +77,7 @@ Budget planning based on sub-task time tracking:
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-database-storage/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-database-storage/releases/download/v1.0.0/DatabaseStorage-1.0.0.zip',
         'remote_install' => false,
-        'compatible_version' => '1.0.32',
+        'compatible_version' => '>=1.0.32',
     ],
     'coverimage' => [
          'title' => 'Coverimage',
@@ -101,7 +101,7 @@ Budget planning based on sub-task time tracking:
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-github-auth/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-github-auth/releases/download/v1.0.2/GithubAuth-1.0.2.zip',
         'remote_install' => true,
-        'compatible_version' => '1.0.32',
+        'compatible_version' => '>=1.0.32',
     ],
     'github-webhook' => [
         'title' => 'Github Webhook',
@@ -113,7 +113,7 @@ Budget planning based on sub-task time tracking:
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-github-webhook/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-github-webhook/releases/download/v1.0.3/GithubWebhook-1.0.3.zip',
         'remote_install' => true,
-        'compatible_version' => '1.0.32',
+        'compatible_version' => '>=1.0.32',
     ],
     'gitlab-auth' => [
         'title' => 'Gitlab Authentication',
@@ -125,7 +125,7 @@ Budget planning based on sub-task time tracking:
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-gitlab-auth/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-gitlab-auth/releases/download/v1.0.3/GitlabAuth-1.0.3.zip',
         'remote_install' => true,
-        'compatible_version' => '1.0.32',
+        'compatible_version' => '>=1.0.32',
     ],
     'gitlab-webhook' => [
         'title' => 'Gitlab Webhook',
@@ -137,7 +137,7 @@ Budget planning based on sub-task time tracking:
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-gitlab-webhook/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-gitlab-webhook/releases/download/v1.0.4/GitlabWebhook-1.0.4.zip',
         'remote_install' => true,
-        'compatible_version' => '1.0.32',
+        'compatible_version' => '>=1.0.32',
     ],
     'gogs-webhook' => [
         'title' => 'Gogs Webhook',
@@ -149,7 +149,7 @@ Budget planning based on sub-task time tracking:
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-gogs-webhook/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-gogs-webhook/releases/download/v1.0.3/GogsWebhook-1.0.3.zip',
         'remote_install' => true,
-        'compatible_version' => '1.0.32',
+        'compatible_version' => '>=1.0.32',
     ],
     'google-auth' => [
         'title' => 'Google Authentication',
@@ -161,7 +161,7 @@ Budget planning based on sub-task time tracking:
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-google-auth/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-google-auth/releases/download/v1.0.3/GoogleAuth-1.0.3.zip',
         'remote_install' => true,
-        'compatible_version' => '1.0.32',
+        'compatible_version' => '>=1.0.32',
     ],
     'hipchat' => [
         'title' => 'Hipchat',
@@ -173,7 +173,7 @@ Budget planning based on sub-task time tracking:
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-hipchat/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-hipchat/releases/download/v1.0.5/Hipchat-1.0.5.zip',
         'remote_install' => true,
-        'compatible_version' => '1.0.32',
+        'compatible_version' => '>=1.0.32',
     ],
     'jabber' => [
         'title' => 'Jabber',
@@ -185,7 +185,7 @@ Budget planning based on sub-task time tracking:
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-jabber/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-jabber/releases/download/v1.0.5/Jabber-1.0.5.zip',
         'remote_install' => true,
-        'compatible_version' => '1.0.32',
+        'compatible_version' => '>=1.0.32',
     ],
     'mailgun' => [
         'title' => 'Mailgun',
@@ -197,7 +197,7 @@ Budget planning based on sub-task time tracking:
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-mailgun/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-mailgun/releases/download/v1.0.5/Mailgun-1.0.5.zip',
         'remote_install' => true,
-        'compatible_version' => '1.0.32',
+        'compatible_version' => '>=1.0.32',
     ],
     'mattermost' => [
         'title' => 'Mattermost',
@@ -209,7 +209,7 @@ Budget planning based on sub-task time tracking:
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-mattermost/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-mattermost/releases/download/v1.0.3/Mattermost-1.0.3.zip',
         'remote_install' => true,
-        'compatible_version' => '1.0.32',
+        'compatible_version' => '>=1.0.32',
     ],
     'metadata' => [
          'title' => 'Metadata Manager',
@@ -257,7 +257,7 @@ Budget planning based on sub-task time tracking:
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-postmark/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-postmark/releases/download/v1.0.5/Postmark-1.0.5.zip',
         'remote_install' => true,
-        'compatible_version' => '1.0.32',
+        'compatible_version' => '>=1.0.32',
     ],
     'rabbitmq' => [
         'title' => 'RabbitMQ',
@@ -269,7 +269,7 @@ Budget planning based on sub-task time tracking:
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-rabbitmq/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-rabbitmq/releases/download/v1.0.0/RabbitMQ-1.0.0.zip',
         'remote_install' => true,
-        'compatible_version' => '1.0.32',
+        'compatible_version' => '>=1.0.32',
     ],
     'registration' => [
         'title' => 'Self-Registration',
@@ -281,7 +281,7 @@ Budget planning based on sub-task time tracking:
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-registration/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-registration/releases/download/v1.0.4/Registration-1.0.4.zip',
         'remote_install' => true,
-        'compatible_version' => '1.0.32',
+        'compatible_version' => '>=1.0.32',
     ],
     'relationgraph' => [
         'title' => 'Relationgraph',
@@ -305,7 +305,7 @@ Budget planning based on sub-task time tracking:
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-reverse-proxy-ldap/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-reverse-proxy-ldap/releases/download/v1.0.2/ReverseProxyLdap-1.0.2.zip',
         'remote_install' => false,
-        'compatible_version' => '1.0.32',
+        'compatible_version' => '>=1.0.32',
     ],
     'rocketchat' => [
         'title' => 'RocketChat',
@@ -317,7 +317,7 @@ Budget planning based on sub-task time tracking:
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-rocketchat/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-rocketchat/releases/download/v1.0.2/RocketChat-1.0.2.zip',
         'remote_install' => true,
-        'compatible_version' => '1.0.32',
+        'compatible_version' => '>=1.0.32',
     ],
     'sendgrid' => [
         'title' => 'Sendgrid',
@@ -329,7 +329,7 @@ Budget planning based on sub-task time tracking:
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-sendgrid/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-sendgrid/releases/download/v1.0.4/Sendgrid-1.0.4.zip',
         'remote_install' => true,
-        'compatible_version' => '1.0.32',
+        'compatible_version' => '>=1.0.32',
     ],
     'slack' => [
         'title' => 'Slack',
@@ -341,7 +341,7 @@ Budget planning based on sub-task time tracking:
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-slack/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-slack/releases/download/v1.0.4/Slack-1.0.4.zip',
         'remote_install' => true,
-        'compatible_version' => '1.0.32',
+        'compatible_version' => '>=1.0.32',
     ],
     'sms-2fa' => [
         'title' => 'SMS Two-Factor Authentication',
@@ -353,7 +353,7 @@ Budget planning based on sub-task time tracking:
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-sms-2fa/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-sms-2fa/releases/download/v1.0.2/SmsTwoFactor-1.0.2.zip',
         'remote_install' => true,
-        'compatible_version' => '1.0.32',
+        'compatible_version' => '>=1.0.32',
     ],
     'subtask-forecast' => [
         'title' => 'Subtask Forecast',
@@ -365,7 +365,19 @@ Budget planning based on sub-task time tracking:
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-subtask-forecast/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-subtask-forecast/releases/download/v1.0.2/SubtaskForecast-1.0.2.zip',
         'remote_install' => true,
-        'compatible_version' => '1.0.32',
+        'compatible_version' => '>=1.0.32',
+    ],
+    'task-board-date' => [
+        'title' => 'Task Board Date',
+        'version' => '1.0.0',
+        'author' => 'Frédéric Guillot',
+        'license' => 'MIT',
+        'description' => 'Add a new date field for tasks to define the visibility on the board and dashboard.',
+        'homepage' => 'https://github.com/kanboard/plugin-task-board-date',
+        'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-task-board-date/master/README.md',
+        'download' => 'https://github.com/kanboard/plugin-task-board-date/releases/download/v1.0.0/TaskBoardDate-1.0.0.zip',
+        'remote_install' => true,
+        'compatible_version' => '>=1.0.33',
     ],
     'timetable' => [
         'title' => 'Timetable',
@@ -383,7 +395,7 @@ Budget planning based on sub-task time tracking:
         'readme' => 'https://raw.githubusercontent.com/kanboard/plugin-timetable/master/README.md',
         'download' => 'https://github.com/kanboard/plugin-timetable/releases/download/v1.0.8/Timetable-1.0.8.zip',
         'remote_install' => true,
-        'compatible_version' => '1.0.32',
+        'compatible_version' => '>=1.0.32',
     ],
     'wunderlist' => [
         'title' => 'Wunderlist',
