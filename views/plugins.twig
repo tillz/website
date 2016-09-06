@@ -10,7 +10,7 @@
         {% for url, plugin in plugins %}
         <article class="plugin">
             <h2><a href="/plugin/{{ url }}">{{ plugin.title }}</a></h2>
-            <p class="plugin-info"><strong>Author:</strong> {{ plugin.author }} | <strong>License:</strong> {{ plugin.license }} | <strong>Version:</strong> {{ plugin.version }} | <strong>Kanboard</strong> = {{  plugin.compatible_version }}</p>
+            <p class="plugin-info"><strong>Author:</strong> {{ plugin.author }} | <strong>License:</strong> {{ plugin.license }} | <strong>Version:</strong> {{ plugin.version }} | <strong>Kanboard</strong> {{  plugin.compatible_version }}</p>
 
             <div class="plugin-description">
                 {{ plugin.description_markdown|raw }}
