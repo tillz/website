@@ -17,10 +17,15 @@ docker-run:
 docker-stop:
 	@ docker rm -f $(CONTAINER)
 
-sync:
-	@ rm -rf ./data/documentation/*
-	@ cp -R ~/Devel/apps/kanboard/doc/*.markdown ./data/documentation/
-	@ cp -R ~/Devel/apps/kanboard/doc/screenshots ./screenshots/documentation/
+docs:
+	@ rm -rf ./data/documentation
+	@ rm -rf ./screenshots/documentation
+	@ mkdir -p ./data/documentation/{fr_FR,en_US}
+	@ mkdir -p ./screenshots/documentation/{fr_FR,en_US}/
+	@ cp -R ~/Devel/apps/kanboard/doc/*.markdown ./data/documentation/en_US/
+	@ cp -R ~/Devel/apps/kanboard/doc/fr_FR/*.markdown ./data/documentation/fr_FR/
+	@ cp -R ~/Devel/apps/kanboard/doc/screenshots ./screenshots/documentation/en_US/
+	@ cp -R ~/Devel/apps/kanboard/doc/fr_FR/screenshots ./screenshots/documentation/fr_FR/
 
 serve:
 	@ rm -f data/cache/*
@@ -28,6 +33,3 @@ serve:
 
 sign:
 	@ gpg -u 894226ED --armor --detach-sign kanboard-${version}.zip
-
-all:
-	sync

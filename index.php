@@ -4,6 +4,10 @@ use Symfony\Component\HttpFoundation\Response;
 use PicoFeed\Syndication\AtomFeedBuilder;
 use PicoFeed\Syndication\AtomItemBuilder;
 
+const DATA_PATH           = 'data/';
+const DEFAULT_LANG        = 'en_US';
+const URL_NIGHTLY_ARCHIVE = 'https://s3.amazonaws.com/kanboard-releases/kanboard-nightly.zip';
+
 require __DIR__.'/vendor/autoload.php';
 require __DIR__.'/config.php';
 
@@ -15,47 +19,38 @@ if (php_sapi_name() === 'cli-server') {
     }
 }
 
-function get_title($file)
-{
-    $f = fopen($file, 'r');
-    $line = fgets($f);
-    fclose($f);
-
-    return $line;
-}
-
-function doc_replace_url(array $matches)
-{
-    return '(/documentation/'.str_replace('.markdown', '', $matches[1]).')';
-}
-
-function doc_replace_image_url(array $matches)
-{
-    return '(/screenshots/documentation/'.$matches[1].')';
-}
-
-function doc_page($directory, $file)
+function render_doc($language, $file)
 {
     $file = basename($file);
-    $directory = basename($directory);
-    $filename = DATA_PATH.$directory.'/'.$file.'.markdown';
+    $filename = DATA_PATH.'documentation/'.$language.'/'.$file.'.markdown';
+    $url_lang = $language === DEFAULT_LANG ? '' : substr($language, 0, 2).'/';
 
     if (! file_exists($filename)) {
         return false;
     }
 
     $markdown = file_get_contents($filename);
-    $markdown = preg_replace_callback('/\((.*.markdown)\)/', 'doc_replace_url', $markdown);
-    $markdown = preg_replace_callback('/\((screenshots.*\.png)\)/', 'doc_replace_image_url', $markdown);
+
+    $markdown = preg_replace_callback('/\((.*.markdown)\)/', function (array $matches) use ($url_lang) {
+        return '(/'.$url_lang.'documentation/'.str_replace('.markdown', '', $matches[1]).')';
+    }, $markdown);
+
+    $markdown = preg_replace_callback('/\((screenshots.*\.png)\)/', function (array $matches) use ($language) {
+        return '(/screenshots/documentation/'.$language.'/'.$matches[1].')';
+    }, $markdown);
 
     return [
-        'menu' => $directory,
         'content' => Parsedown::instance()->text($markdown),
-        'title' => get_title($filename),
+        'title' => file($filename)[0],
     ];
 }
 
-function page($filename, $url = '')
+function render_nav($language)
+{
+    return Parsedown::instance()->text(file_get_contents(DATA_PATH.'pages/'.$language.'/nav.markdown'));
+}
+
+function render_page($filename, $url = '')
 {
     $url = basename($url);
     $lines = file($filename);
@@ -90,14 +85,14 @@ function page($filename, $url = '')
     ];
 }
 
-function news()
+function render_news()
 {
     $news = [];
     $dir = new DirectoryIterator(DATA_PATH.'news');
 
     foreach ($dir as $fileinfo) {
         if ($fileinfo->getExtension() === 'markdown') {
-            $post = page($fileinfo->getRealPath(), $fileinfo->getBasename('.markdown'));
+            $post = render_page($fileinfo->getRealPath(), $fileinfo->getBasename('.markdown'));
             $news[$post['date']->format('Y-m-d')] = $post;
         }
     }
@@ -189,119 +184,10 @@ $app->register(new Silex\Provider\TwigServiceProvider(), [
     'twig.path' => __DIR__.'/views',
 ]);
 
-$app->get('/', function () use ($app) {
-    return cache($app, function () use ($app) {
-        return $app['twig']->render('homepage.twig', [
-            'menu' => 'home',
-            'app' => [
-                'version' => APP_VERSION,
-                'release_date' => APP_RELEASE_DATE,
-            ],
-        ]);
-    });
-});
-
-$app->get('/donations', function () use ($app) {
-    return cache($app, function () use ($app) {
-        return $app['twig']->render('donations.twig');
-    });
-});
-
-$app->get('/downloads', function () use ($app) {
-    return cache($app, function () use ($app) {
-        return $app['twig']->render('downloads.twig', [
-            'menu' => 'downloads',
-            'app' => [
-                'version' => APP_VERSION,
-                'release_date' => APP_RELEASE_DATE,
-            ],
-        ]);
-    });
-});
-
-$app->get('/features', function () use ($app) {
-    return cache($app, function () use ($app) {
-        return $app['twig']->render('features.twig', [
-            'menu' => 'features',
-        ]);
-    });
-});
-
-$app->get('/features/kanban', function () use ($app) {
-    return cache($app, function () use ($app) {
-        return $app['twig']->render('feature_kanban.twig', [
-            'menu' => 'features',
-        ]);
-    });
-});
-
-$app->get('/features/search-and-filters', function () use ($app) {
-    return cache($app, function () use ($app) {
-        return $app['twig']->render('feature_search.twig', [
-            'menu' => 'features',
-        ]);
-    });
-});
-
-$app->get('/features/dashboard', function () use ($app) {
-    return cache($app, function () use ($app) {
-        return $app['twig']->render('feature_dashboard.twig', [
-            'menu' => 'features',
-        ]);
-    });
-});
-
-$app->get('/features/analytics-and-reports', function () use ($app) {
-    return cache($app, function () use ($app) {
-        return $app['twig']->render('feature_analytics.twig', [
-            'menu' => 'features',
-        ]);
-    });
-});
-
-$app->get('/features/integrations', function () use ($app) {
-    return cache($app, function () use ($app) {
-        return $app['twig']->render('feature_integration.twig', [
-            'menu' => 'features',
-        ]);
-    });
-});
-
-$app->get('/features/gantt-chart', function () use ($app) {
-    return cache($app, function () use ($app) {
-        return $app['twig']->render('feature_gantt.twig', [
-            'menu' => 'features',
-        ]);
-    });
-});
-
-$app->get('/enterprise', function () use ($app) {
-    return cache($app, function () use ($app) {
-        return $app['twig']->render('enterprise.twig', [
-            'menu' => 'enterprise',
-        ]);
-    });
-});
-
-$app->get('/consulting', function () use ($app) {
-    return cache($app, function () use ($app) {
-        return $app['twig']->render('consulting.twig', [
-            'menu' => 'enterprise',
-        ]);
-    });
-});
-
-$app->get('/hosting', function () use ($app) {
-    return cache($app, function () use ($app) {
-        return $app['twig']->render('hosting.twig', [
-            'menu' => 'hosting',
-            'page' => page(implode(DIRECTORY_SEPARATOR, [DATA_PATH, 'pages', 'en_US', 'hosting.markdown'])),
-            'price' => MONTHLY_PRICE,
-            'trial_period' => TRIAL_PERIOD,
-            'signup_url' => SIGNUP_URL,
-        ]);
-    });
-});
+$app['twig']->addGlobal('info', [
+    'version' => APP_VERSION,
+    'date' => APP_RELEASE_DATE,
+]);
 
 $app->get('/plugins.json', function () use ($app) {
     return cache($app, function () use ($app) {
@@ -312,8 +198,9 @@ $app->get('/plugins.json', function () use ($app) {
 $app->get('/plugins', function () use ($app) {
     return cache($app, function () use ($app) {
         return $app['twig']->render('plugins.twig', [
-            'menu' => 'plugins',
             'plugins' => load_plugins(),
+            'language' => DEFAULT_LANG,
+            'nav' => render_nav(DEFAULT_LANG),
         ]);
     });
 });
@@ -327,66 +214,9 @@ $app->get('/plugin/{plugin}', function ($plugin) use ($app) {
         }
 
         return $app['twig']->render('plugin.twig', [
-            'menu' => 'plugins',
             'plugin' => $plugins[$plugin],
-        ]);
-    });
-});
-
-$app->get('/documentation', function () use ($app) {
-    return cache($app, function () use ($app) {
-        $page = doc_page('documentation', 'index');
-
-        if ($page === false) {
-            return $app->abort(404);
-        }
-
-        return $app['twig']->render('page.twig', $page + ['menu' => 'documentation']);
-    });
-});
-
-$app->get('/documentation/{file}', function ($file) use ($app) {
-    $redirects = [
-        'slack' => '/plugin/slack',
-        'jabber' => '/plugin/jabber',
-        'hipchat' => '/plugin/hipchat',
-        'mailgun' => '/plugin/mailgun',
-        'sendgrid' => '/plugin/sendgrid',
-        'postmark' => '/plugin/postmark',
-        'budget' => '/plugin/budget',
-        'nginx-ssl-php-fpm' => '/documentation',
-        'recommended-configuration' => '/documentation/requirements',
-        'bitbucket-webhooks' => '/plugin/bitbucket-webhook',
-        'gitlab-webhooks' => '/plugin/gitlab-webhook',
-        'github-webhooks' => '/plugin/github-webhook',
-        'google-authentication' => '/plugin/google-auth',
-        'github-authentication' => '/plugin/github-auth',
-        'gitlab-authentication' => '/plugin/gitlab-auth',
-    ];
-
-    if (isset($redirects[$file])) {
-        return $app->redirect($redirects[$file], 301);
-    }
-
-    return cache($app, function () use ($app, $file) {
-        $page = doc_page('documentation', $file);
-
-        if ($page === false) {
-            return $app->abort(404);
-        }
-
-        return $app['twig']->render('page.twig', $page);
-    });
-});
-
-$app->get('/downloads', function () use ($app) {
-    return cache($app, function () use ($app) {
-        return $app['twig']->render('downloads.twig', [
-            'menu' => 'downloads',
-            'app'  => [
-                'version'      => APP_VERSION,
-                'release_date' => APP_RELEASE_DATE,
-            ],
+            'language' => DEFAULT_LANG,
+            'nav' => render_nav(DEFAULT_LANG),
         ]);
     });
 });
@@ -394,8 +224,9 @@ $app->get('/downloads', function () use ($app) {
 $app->get('/news', function () use ($app) {
     return cache($app, function () use ($app) {
         return $app['twig']->render('posts.twig', [
-            'menu' => 'news',
-            'posts' => news(),
+            'posts' => render_news(),
+            'language' => DEFAULT_LANG,
+            'nav' => render_nav(DEFAULT_LANG),
         ]);
     });
 });
@@ -403,8 +234,9 @@ $app->get('/news', function () use ($app) {
 $app->get('/news/{file}', function ($file) use ($app) {
     return cache($app, function () use ($app, $file) {
         return $app['twig']->render('post.twig', [
-            'menu' => 'news',
-            'post' => page(DATA_PATH . 'news' . DIRECTORY_SEPARATOR . $file . '.markdown', $file),
+            'post' => render_page(DATA_PATH . 'news' . DIRECTORY_SEPARATOR . $file . '.markdown', $file),
+            'language' => DEFAULT_LANG,
+            'nav' => render_nav(DEFAULT_LANG),
         ]);
     });
 });
@@ -422,7 +254,7 @@ $app->get('/feed', function () use ($app) {
             ->withSiteUrl('https://kanboard.net/')
             ->withDate(new DateTime());
 
-        foreach (news() as $post) {
+        foreach (render_news() as $post) {
             $feedBuilder
                 ->withItem(AtomItemBuilder::create($feedBuilder)
                     ->withTitle($post['title'])
@@ -437,43 +269,122 @@ $app->get('/feed', function () use ($app) {
     }, ['Content-Type' => 'text/xml']);
 });
 
-$app->get('/demo', function () use ($app) {
-    return $app->redirect('/hosting', 301);
-});
 
-$app->get('/development', function () use ($app) {
-    return $app->redirect('/consulting', 301);
-});
+$archives = [
+    '/kanboard-nightly.zip' => URL_NIGHTLY_ARCHIVE,
+    '/kanboard-latest.zip' => '/kanboard-' . APP_VERSION . '.zip',
+];
 
-$app->post('/subscribe/enterprise', function () use ($app) {
-    add_subscriber('enterprise@ml.kanboard.net', $_POST['email']);
-    return $app->redirect('/');
-});
+foreach ($archives as $url => $archive) {
+    $app->get($url, function () use ($app, $archive) {
+        return $app->redirect($archive, 302);
+    });
+}
 
-$app->post('/subscribe/hosting', function () use ($app) {
-    add_subscriber('hosting@ml.kanboard.net', $_POST['email']);
-    return $app->redirect('/');
-});
 
-$app->post('/subscribe/newsletter', function () use ($app) {
-    add_subscriber('newsletter@ml.kanboard.net', $_POST['email']);
-    return $app->redirect('/');
-});
+$newsletters = [
+    '/subscribe/enterprise' => 'enterprise@ml.kanboard.net',
+    '/subscribe/newsletter' => 'newsletter@ml.kanboard.net',
+];
 
-$app->get('/kanboard-{version}.zip', function ($version) use ($app) {
-    if ($version === 'latest') {
-        $version = APP_VERSION;
-    }
+foreach ($newsletters as $url => $email) {
+    $app->post($url, function () use ($app, $email) {
+        add_subscriber($email, $_POST['email']);
+        return $app->redirect('/');
+    });
+}
 
-    return $app->redirect('https://s3.amazonaws.com/kanboard-releases/kanboard-'.$version.'.zip', 302);
-})->assert('version', '.+');;
 
-$app->get('/kanboard-{version}.zip.asc', function ($version) use ($app) {
-    if ($version === 'latest') {
-        $version = APP_VERSION;
-    }
+$docs = [
+    '/documentation' => 'en_US',
+    '/documentation/{file}' => 'en_US',
+    '/fr/documentation' => 'fr_FR',
+    '/fr/documentation/{file}' => 'fr_FR',
+];
 
-    return $app->redirect('https://s3.amazonaws.com/kanboard-releases/kanboard-'.$version.'.zip.asc', 302);
-})->assert('version', '.+');;
+foreach ($docs as $url => $language) {
+    $app->get($url, function ($file = 'index') use ($app, $language) {
+        return cache($app, function () use ($app, $file, $language) {
+            $page = render_doc($language, $file);
+
+            if ($page === false) {
+                return $app->abort(404);
+            }
+
+            return $app['twig']->render('page.twig', [
+                'page' => $page,
+                'language' => $language,
+                'nav' => render_nav($language),
+            ]);
+        });
+    });
+}
+
+
+$pages = [
+    '/' => 'en_US/index.markdown',
+    '/security' => 'en_US/security.markdown',
+    '/fr' => 'fr_FR/index.markdown',
+    '/features' => 'en_US/features.markdown',
+    '/fr/fonctionnalites' => 'fr_FR/features.markdown',
+    '/consulting' => 'en_US/consulting.markdown',
+    '/fr/personnalisation' => 'fr_FR/consulting.markdown',
+    '/enterprise' => 'en_US/enterprise.markdown',
+    '/fr/entreprise' => 'fr_FR/enterprise.markdown',
+    '/downloads' => 'en_US/downloads.markdown',
+    '/fr/telechargements' => 'fr_FR/downloads.markdown',
+    '/hosting' => 'en_US/hosting.markdown',
+    '/fr/hebergement' => 'fr_FR/hosting.markdown',
+    '/donations' => 'en_US/donations.markdown',
+    '/fr/donations' => 'fr_FR/donations.markdown',
+];
+
+foreach ($pages as $url => $markdown_file) {
+    $app->get($url, function () use ($app, $markdown_file) {
+        return cache($app, function () use ($app, $markdown_file) {
+            $page = render_page(DATA_PATH.'pages/'.$markdown_file);
+
+            return $app['twig']->render('page.twig', [
+                'page' => $page,
+                'nav' => render_nav($page['language']),
+                'language' => $page['language'],
+            ]);
+        });
+    });
+}
+
+
+$redirects = [
+    '/demo' => '/hosting',
+    '/development' => '/consulting',
+    '/documentation/slack' => '/plugin/slack',
+    '/documentation/jabber' => '/plugin/jabber',
+    '/documentation/hipchat' => '/plugin/hipchat',
+    '/documentation/mailgun' => '/plugin/mailgun',
+    '/documentation/sendgrid' => '/plugin/sendgrid',
+    '/documentation/postmark' => '/plugin/postmark',
+    '/documentation/budget' => '/plugin/budget',
+    '/documentation/nginx-ssl-php-fpm' => '/documentation',
+    '/documentation/recommended-configuration' => '/documentation/requirements',
+    '/documentation/bitbucket-webhooks' => '/plugin/bitbucket-webhook',
+    '/documentation/gitlab-webhooks' => '/plugin/gitlab-webhook',
+    '/documentation/github-webhooks' => '/plugin/github-webhook',
+    '/documentation/google-authentication' => '/plugin/google-auth',
+    '/documentation/github-authentication' => '/plugin/github-auth',
+    '/documentation/gitlab-authentication' => '/plugin/gitlab-auth',
+    '/features/gantt-chart' => '/features',
+    '/features/integrations' => '/features',
+    '/features/analytics-and-reports' => '/features',
+    '/features/dashboard' => '/features',
+    '/features/search-and-filters' => '/features',
+    '/features/kanban' => '/features',
+];
+
+foreach ($redirects as $source => $destination) {
+    $app->get($source, function () use ($app, $destination) {
+        return $app->redirect($destination, 301);
+    });
+}
+
 
 $app->run();

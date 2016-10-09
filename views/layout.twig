@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ language }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -14,56 +14,25 @@
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed">
 </head>
 <body>
-<header>
-    <nav>
-        <a class="logo" href="/">kanboard</a>
-        <ul>
-            <li {% if menu == 'features' %} class="active" {% endif %}>
-                <a href="/features">Features</a>
-            </li>
-            <li {% if menu == 'plugins' %} class="active" {% endif %}>
-                <a href="/plugins">Plugins</a>
-            </li>
-            <li {% if menu == 'news' %} class="active" {% endif %}>
-                <a href="/news">News</a>
-            </li>
-            <li {% if menu == 'enterprise' %} class="active" {% endif %}>
-                <a href="/enterprise">Enterprise</a>
-            </li>
-            <li {% if menu == 'hosting' %} class="active" {% endif %}>
-                <a href="/hosting" class="highlighted-menu">Hosting</a>
-            </li>
-            <li {% if menu == 'downloads' %} class="active" {% endif %}>
-                <a href="/downloads">Downloads</a>
-            </li>
-        </ul>
-    </nav>
-</header>
+    <div id="content">
+        <article class="page">
+            {% block content %}{% endblock %}
+        </article>
+        <nav>
+            <h3 class="logo"><span class="k-letter">K</span><span class="b-letter">B</span> <a href="{% if (language == 'fr_FR') %}/fr{% else %}/{% endif %}">Kanboard</a></h3>
 
-<div class="page">{% block content %}{% endblock %}</div>
+            {{ nav|raw }}
 
-<footer>
-    <div class="first-column">
-        <ul>
-            <li>By <a href="https://github.com/fguillot">Frédéric Guillot</a></li>
-            <li><a href="https://miniflux.net/">Discover Miniflux, the minimalist RSS reader</a></li>
-            <li>Made in <i class="flag flag-ca"></i> Canada and <i class="flag flag-fr"></i> France</li>
-        </ul>
+            <div class="release-info">v{{ info.version }} ({{ info.date }})</div>
+        </nav>
     </div>
-    <div class="column">
-        <ul>
-            <li><a href="/donations">Donations</a></li>
-            <li><a href="/documentation">Documentation</a></li>
-            <li><a href="https://github.com/kanboard/kanboard/issues">Bug tracker</a></li>
-        </ul>
-    </div>
-    <div class="column">
-        <ul>
-            <li><a href="/feed">RSS Feed</a></li>
-            <li><a href="https://twitter.com/KanboardApp">Twitter</a></li>
-            <li>IRC: <a href="ircs://chat.freenode.net:6697/#kanboard">#kanboard</a> (freenode)</li>
-        </ul>
-    </div>
-</footer>
+    <footer>
+        Copyright 2016 - Frédéric Guillot -
+        {% if (language == 'en_US') %}
+            <a href="/fr">Français</a>
+        {% else %}
+            <a href="/">English</a>
+        {% endif %}
+    </footer>
 </body>
 </html>
