@@ -426,7 +426,7 @@ Budget planning based on sub-task time tracking:
         'version' => '1.0.0',
         'author' => 'Manuel Raposo',
         'license' => 'MIT',
-        'description' => 'This plugin display estimates of subtasks in the user calendar. The user timetable must be filled to see time slots in the calendar.',
+        'description' => 'This plugin adds a Due Date to subtasks.',
         'homepage' => 'https://github.com/eSkiSo/Subtaskdate',
         'readme' => 'https://raw.githubusercontent.com/eSkiSo/Subtaskdate/master/README.md',
         'download' => 'https://github.com/eSkiSo/Subtaskdate/releases/download/v1.0.0/Subtaskdate-1.0.0.zip',
