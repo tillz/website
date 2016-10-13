@@ -36,6 +36,10 @@ function render_doc($language, $file)
     }, $markdown);
 
     $markdown = preg_replace_callback('/\((screenshots.*\.png)\)/', function (array $matches) use ($language) {
+        if (! file_exists('screenshots/documentation/'.$language.'/'.$matches[1])) {
+            return '(/screenshots/documentation/en_US/'.$matches[1].')';
+        }
+
         return '(/screenshots/documentation/'.$language.'/'.$matches[1].')';
     }, $markdown);
 
