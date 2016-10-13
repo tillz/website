@@ -1,6 +1,8 @@
 Kanboard's website
 ==================
 
+[![Build Status](https://travis-ci.org/kanboard/website.svg?branch=master)](https://travis-ci.org/kanboard/website)
+
 Build with PHP, Silex, Twig, Parsedown and [PicoFeed](https://github.com/fguillot/picoFeed).
 
 Installation
@@ -82,4 +84,4 @@ Registration-1.0.4.zip
     └── ...
 ```
 
-The archive will be exctracted into the folder `plugins` to have `plugins/Registration`.
+The archive will be extracted into the folder `plugins` to have `plugins/Registration`.
