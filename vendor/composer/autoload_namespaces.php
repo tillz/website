@@ -8,7 +8,6 @@ $baseDir = dirname($vendorDir);
 return array(
     'ZendXml\\' => array($vendorDir . '/zendframework/zendxml/library'),
     'Twig_' => array($vendorDir . '/twig/twig/lib'),
-    'Psr\\Log\\' => array($vendorDir . '/psr/log'),
     'Pimple' => array($vendorDir . '/pimple/pimple/lib'),
     'PicoFeed' => array($vendorDir . '/fguillot/picofeed/lib'),
     'Parsedown' => array($vendorDir . '/erusev/parsedown'),
