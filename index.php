@@ -277,6 +277,7 @@ $app->get('/feed', function () use ($app) {
 $archives = [
     '/kanboard-nightly.zip' => URL_NIGHTLY_ARCHIVE,
     '/kanboard-latest.zip' => '/kanboard-' . APP_VERSION . '.zip',
+    '/kanboard-latest.zip.asc' => '/kanboard-' . APP_VERSION . '.zip.asc',
 ];
 
 foreach ($archives as $url => $archive) {

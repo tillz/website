@@ -8,7 +8,7 @@ Téléchargements
 
 ### Version stable
 
-- [kanboard-latest.zip](/kanboard-latest.zip)
+- [kanboard-latest.zip](/kanboard-latest.zip)  ([Signature](/kanboard-latest.zip.asc))
 
 ### Version journalière (seulement pour les tests)
 
