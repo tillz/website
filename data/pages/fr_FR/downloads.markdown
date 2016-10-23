@@ -25,10 +25,10 @@ N'oubliez pas de lire les [instructions d'installations](/fr/documentation/insta
 Téléchargez la clé GPG publique :
 
 ```
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 894226ED
+gpg --keyserver hkp://keys.gnupg.net --recv-keys  'DCF1 D3CB C1E4 3342 116F  760E 112C 718C 8942 26ED'
 ```
 
-La clé publique est également [disponible ici](/gpg/894226ED.asc).
+La clé publique est également [disponible ici](/gpg/DCF1D3CBC1E43342116F760E112C718C894226ED.asc).
 
 Vérifiez la signature :
 
