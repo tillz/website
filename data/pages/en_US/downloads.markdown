@@ -25,10 +25,10 @@ Do not forget to read the [installation instructions](/documentation/installatio
 Download the public key:
 
 ```
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 894226ED
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 'DCF1 D3CB C1E4 3342 116F  760E 112C 718C 8942 26ED'
 ```
 
-The public key is also [available here](/gpg/894226ED.asc).
+The public key is also [available here](/gpg/DCF1D3CBC1E43342116F760E112C718C894226ED.asc).
 
 Verify signature:
 
