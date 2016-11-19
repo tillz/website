@@ -9,7 +9,14 @@ const DEFAULT_LANG        = 'en_US';
 const URL_NIGHTLY_ARCHIVE = 'https://s3.amazonaws.com/kanboard-releases/kanboard-nightly.zip';
 
 require __DIR__.'/vendor/autoload.php';
-require __DIR__.'/config.php';
+
+if (file_exists(__DIR__.'/config.php')) {
+    require __DIR__.'/config.php';
+}
+
+defined('APP_VERSION') or define('APP_VERSION', '0.0.0');
+defined('APP_RELEASE_DATE') or define('APP_RELEASE_DATE', 'today');
+defined('MAILGUN_API_KEY') or define('MAILGUN_API_KEY', 'replace_me');
 
 if (php_sapi_name() === 'cli-server') {
     $filename = __DIR__.preg_replace('#(\?.*)$#', '', $_SERVER['REQUEST_URI']);
