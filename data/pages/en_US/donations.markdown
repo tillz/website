@@ -13,3 +13,5 @@ If you are using Kanboard every day at your company, you may consider to make a 
     <input type="hidden" name="hosted_button_id" value="RCQNQETNVHRJ4">
     <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 </form>
+
+Bitcoin address: **34NKWQZAZrrc14ZLU6z3knv8RdqAcKEGTU**
