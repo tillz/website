@@ -12,6 +12,13 @@ sudo apt-get install -y apache2 libapache2-mod-php7.0 php7.0-cli php7.0-mbstring
     php7.0-opcache php7.0-json php7.0-mysql php7.0-pgsql php7.0-ldap php7.0-gd
 ```
 
+Enable PDO-Sqlite in PHP-Configuration:
+
+```bash
+sudo echo 'extension=php_pdo_sqlite.dll' > /etc/php/7.0/apache2/conf.d/20-pdo-sqlite.ini
+service apache2 restart
+```
+
 Install Kanboard:
 
 ```bash
